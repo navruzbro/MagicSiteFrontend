@@ -1,4 +1,9 @@
+body{
+  font-family:  "Roboto", sans-serif; ;
+}
+
 /*font css */
+
 
 .roboto-thin {
     font-family: "Roboto", sans-serif;
@@ -96,10 +101,46 @@ html {
 .txt-green-grey div code a, .txt-green-grey a i{
   color:#e1f7d0;
 }
+
+
+.scrolleffect {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease-out;
+}
+
+.scrolleffect.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.animated-text{
+  opacity: 0; 
+  transform: translateY(30px); 
+  animation: fadeInUp 1.5s ease-out forwards; 
+}
+
+/* Animatsiya tavsifi */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px); 
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); 
+  }
+}
 /*end txt styles*/
 
 
 /*plus styles*/
+.display-none{
+  display: none!important;
+}
+
 button {
   font-size: 16px;
   padding: 10px 20px;
@@ -109,8 +150,48 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-/*Navbar section styles*/
+.btn-dark{
+  display: inline-block;
+  font-size:1rem;
+  color: #c5f0a4;
+  text-decoration: none;
+  background-color: #2a2a2a;
+  padding: 0.6rem 2rem;
+  border-radius:8px 0 8px 0;
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:all 0.3s ease-in-out;
+}
 
+.btn-dark:hover{
+  background-color: #c5f0a4;
+  color:#2a2a2a;
+  border:2px solid #2a2a2a;
+}
+
+.btn-white{
+  display: inline-block;
+  font-size:1rem;
+  color:#2a2a2a;
+  background-color: #c5f0a4;
+  text-decoration: none;
+  padding: 0.6rem 2rem;
+  border-radius:0 8px 0 8px;
+  border:2px solid #2a2a2a;
+  cursor:pointer;
+  transition:all 0.3s ease-in-out;
+}
+
+.btn-white:hover{
+  background-color: #2a2a2a;
+  color:#c5f0a4;
+  border:2.2px solid #2a2a2a;
+}
+
+/*Navbar section styles*/
+.navbar{
+  background-color: #a9e978!important;
+}
 
 .navbar-brand img{
   width:15rem;
@@ -132,7 +213,9 @@ button {
     }
   }
 
-  /*Main section*/
+
+
+/*Main section*/
   .main-sectio, .g766{
     background-color: #c5f0a4;
     margin:0;
@@ -141,6 +224,74 @@ button {
     padding:1rem 1.5rem 1rem 1.5rem;
     justify-content:center;
     align-items:center;
+  }
+  
+  .bee-icon{
+    position: absolute;
+  }
+  .bee-icon img{
+    width:1.5rem;
+    transform: rotate(30deg);
+    position:absolute;
+    margin-bottom:-0.4rem;
+    margin-right:0.3rem;
+    animation: fly-bee 4s infinite ease-in-out; 
+  }
+
+  .bic3{
+    right:0;
+  }
+  
+  .btn-white .icon-open-new{
+    color:black;
+  }
+
+  .main-text-buttons{
+    margin-top:1rem;
+  }
+  .main-text-buttons .btn-white{
+    margin-left:1rem;
+  }
+
+  .decorative-circle {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(52, 199, 89, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    animation: float 3s infinite ease-in-out;
+    
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+ 
+    @keyframes fly-bee {
+      0% {
+          transform: translate(0, 0) rotate(30deg); /* Boshlanish nuqtasi */
+      }
+      25% {
+          transform: translate(20px, -30px) rotate(60deg); /* Yuqoriga */
+      }
+      50% {
+          transform: translate(50px, 0) rotate(-30deg); /* O'ngga siljish */
+      }
+      75% {
+          transform: translate(30px, 30px) rotate(-60deg); /* Pastga */
+      }
+      100% {
+          transform: translate(0, 0) rotate(30deg); /* Boshlanishga qaytish */
+      }
   }
   @media(min-width:576px){
     .main-text-box{
@@ -169,6 +320,8 @@ button {
 #d432{
   margin-right:0.7rem;
 }
+
+
 .main-site-text p i{
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
