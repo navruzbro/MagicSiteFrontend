@@ -3,3 +3,8 @@
  #2a2a2a  #000000
 
 
+Keyinroq asosiy sahifani main qismini
+ orqa fonini o'zgartirish va qo'shimcha 
+ animatsiyalar qo'shish sekin sekin qo'shimchalar
+  qo'shib borish va o'zgaritirib mukammallashtirib borish
+

@@ -1,9 +1,11 @@
 body{
-  font-family:  "Roboto", sans-serif; ;
+  font-family:  "Roboto", sans-serif;
 }
 
 /*font css */
-
+.roboto{
+  font-family: "Roboto", sans-serif;
+}
 
 .roboto-thin {
     font-family: "Roboto", sans-serif;
@@ -114,25 +116,6 @@ html {
   transform: translateY(0);
 }
 
-
-
-.animated-text{
-  opacity: 0; 
-  transform: translateY(30px); 
-  animation: fadeInUp 1.5s ease-out forwards; 
-}
-
-/* Animatsiya tavsifi */
-@keyframes fadeInUp {
-  0% {
-      opacity: 0;
-      transform: translateY(30px); 
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0); 
-  }
-}
 /*end txt styles*/
 
 
@@ -213,6 +196,75 @@ button {
     }
   }
 
+
+/*Bottom navbar styles */
+
+@media(min-width:576px){
+  #small-navbar{
+    display: none;
+  }
+}
+@media(max-width:576px){
+  .bottom-navbar{
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:1.6rem;
+    margin-bottom:1.6rem;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(20px);
+    border-radius:20px;
+    padding-left:0.7rem;
+    padding-right:0.7rem;
+}
+.bottom-nav-item{
+  color:#52B036;
+  text-decoration: none;
+  padding-top:0.4rem;
+  display:flex;
+  justify-content: center;
+  text-align:center;
+}
+.bottom-nav-item p, .bottom-nav-item i, .bottom-nav-item code{
+  display:inline;
+  padding:0;
+  color:#52B036;
+  text-decoration: none;
+
+}
+}
+@media(max-width:379px){
+  .bottom-navbar{
+      width:90%;
+      margin-left:5%;
+      margin-right:5%;
+      margin-top:1rem;
+      margin-bottom:1rem;
+      padding-left:0.4rem;
+      padding-right:0.4rem;
+  }
+}
+@media(max-width:325px){
+  .bottom-navbar{
+      width:95%;
+      margin-left:2.5%;
+      margin-right:2.5%;
+      padding-left:0.2rem;
+      padding-right:0.2rem;
+  }
+}
+
+@media(max-width:299px){
+  .bottom-nav-item p i{
+      font-size:0.8rem;
+  }
+  .bottom-nav-item p code{
+      font-size:0.6rem;
+  }
+}
+
+/*End bottom navbar */
 
 
 /*Main section*/
@@ -358,12 +410,46 @@ button {
     margin-left:7%;
     margin-right:7%;
     transform:rotate(-10deg);
+    transition:all 0.5s ease-in-out;
   }
   .main-section div .main-img .img-box img{
     width:100%;
-    
   }
 
+  .main-section div .main-img .img-box:hover{
+    transform:rotate(0deg) scale(1.05);
+  }
+
+/*End main section*/
+
+/*Second section*/
+
+.second-section{
+  background-color: #c5f0a4;
+}
+
+
+.second-section-img-box{
+  border-radius:20% 40% 20% 40%;
+  overflow: hidden;
+  width:80%;
+  margin-top:5%;
+  margin-left:7%;
+  margin-right:7%;
+  transform:rotate(5deg);
+  transition:all 0.5s ease-in-out;
+}
+.second-section-img-box img{
+  width:100%
+}
+
+.second-section-img-box:hover{
+  transform:rotate(-0.5deg) scale(1.06);
+}
+
+.second-section-collapse-item a, .second-section-collapse-item-inner div{
+  color:#2a2a2a;
+}
 
 /*footer section*/
 .footer-section{
