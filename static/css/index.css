@@ -1,6 +1,169 @@
+html{
+  background-color: #c5f0a4;
+}
+
 body{
   font-family:  "Roboto", sans-serif;
 }
+
+  
+  ::selection {
+    background: #a9e978; 
+    color: #2a2a2a;      
+  }
+
+  /* for Firefox */
+  ::-moz-selection {
+    background: #a9e978;
+    color: #2a2a2a;      
+  }
+
+  .unselectable {
+    user-select: none; /*unselectable*/
+    -webkit-user-select: none; /*for Safari*/
+    -moz-user-select: none; /*for Firefox  */
+    -ms-user-select: none; /*for old IE  */
+  }
+/*ANIMATIONS*/
+  /*typing animation*/
+  .typing {
+    width: 20ch;
+    animation: typing 4s steps(20), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 20ch;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  
+
+/*loader animation*/
+/* Loader container */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c5f0a4; /* Background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 1s ease, transform 1s ease; /* Animatsiya */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Loaderning aylanish animatsiyasi */
+
+
+/* Loading text */
+.loader-container p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #2a2a2a;
+  font-weight: bold;
+}
+
+
+/* Loaderni yo'qolishi uchun holat */
+.loader-container.hidden {
+  opacity: 0; /* Ko‘rinmas holatga o‘tadi */
+  transform: scale(0.8); /* Kichrayadi */
+  pointer-events: none; /* Endi hech qanday ta’sir qilmaydi */
+}
+
+/* Kontentning boshlang'ich holati */
+#content {
+  font-family: 'Roboto', sans-serif;
+  color: #111111;
+  padding: 50px;
+}
+
+
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;  
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #2a2a2a;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #2a2a2a;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #2a2a2a;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+
+
+
+
 
 /*font css */
 .roboto{
@@ -447,8 +610,96 @@ button {
   transform:rotate(-0.5deg) scale(1.06);
 }
 
-.second-section-collapse-item a, .second-section-collapse-item-inner div{
+.second-section-collapse-item-inner div{
   color:#2a2a2a;
+}
+
+
+ /* Collapse tashqi va ichki qismlari uchun rang va dizayn */
+ .custom-accordion {
+  padding:1rem 0.5rem;
+  margin-top:0.5rem;
+  margin-bottom:0.2rem;
+  background-color: #c5f0a4;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  border:2px solid #2a2a2a;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.custom-accordion:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.custom-collapse .card-body {
+  background-color: #c5f0a4;
+  border: 2px 0px 0px 0px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: 15px;
+  animation: fadeInSlide 0.4s ease-out;
+}
+
+/* Animatsiya: paydo bo'lish va siljish */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Collapse sarlavha linki hover effekti */
+.second-section-collapse-item a {
+  color:#2a2a2a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.second-section-collapse-item a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+
+/*Between animation*/
+.text-container_btw {
+  background-color: #c5f0a4;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 50px; /* Matn balandligi */
+}
+
+/* Matnni ketma-ket joylashtirish */
+.text-slide_btw {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: bold;
+  color: #004d40;
+  animation: slideText 20s linear infinite;
+}
+
+/* Animatsiya uchun asosiy container */
+.text-wrapper_btw {
+  display: flex;
+}
+
+/* Uzluksiz harakat animatsiyasi */
+@keyframes slideText {
+  0% {
+    transform: translateX(0); /* Boshlanish joyi */
+  }
+  100% {
+    transform: translateX(-100%); /* Tugash joyi */
+  }
 }
 
 /*footer section*/

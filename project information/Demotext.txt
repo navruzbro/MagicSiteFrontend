@@ -1,0 +1,53 @@
+<div class="second-section-text scrolleffect">
+                  <h2 class="fs-3 roboto-black playfair">
+                    Eng ko'p beriladigan savollar:
+                  </h2>
+                  <!--Collapse 1-->
+                  <p class="second-section-collapse-item d-inline-flex gap-1">
+                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-1" role="button" aria-expanded="false" aria-controls="Second-section-collapse-1">
+                      Nega narxlar arzon?
+                    </a>
+                  </p>
+                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-1">
+                    <div class="card card-body">
+                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                    </div>
+                  </div>
+                  <!--Collapse 2-->
+                  <div></div>
+                  <p class="second-section-collapse-item d-inline-flex gap-1">
+                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-2" role="button" aria-expanded="false" aria-controls="Second-section-collapse-2">
+                      Nega narxlar arzon?
+                    </a>
+                  </p>
+                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-2">
+                    <div class="card card-body">
+                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                    </div>
+                  </div>
+                  <!--Collapse 3-->
+                  <div></div>
+                  <p class="second-section-collapse-item d-inline-flex gap-1">
+                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-3" role="button" aria-expanded="false" aria-controls="Second-section-collapse-3">
+                      Nega narxlar arzon?
+                    </a>
+                  </p>
+                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-3">
+                    <div class="card card-body">
+                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                    </div>
+                  </div>
+                  <!--Collapse 4-->
+                  <div></div>
+                  <p class="second-section-collapse-item d-inline-flex gap-1">
+                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-4" role="button" aria-expanded="false" aria-controls="Second-section-collapse-4">
+                      Nega narxlar arzon?
+                    </a>
+                  </p>
+                  
+                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-4">
+                    <div class="card card-body">
+                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                    </div>
+                  </div>
+                </div>

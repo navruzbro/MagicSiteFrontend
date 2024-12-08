@@ -106,7 +106,17 @@
   </div>
 </div>
 <!--END-->
-        
+
+<!--Loader animation-->
+<div id="loader" class="loader-container">
+  <div class="loader">
+    <div class="inner one"></div>
+    <div class="inner two"></div>
+    <div class="inner three"></div>
+  </div>
+</div>
+<!--End Loader animation-->
+
 <!--Navbar section-->
         <nav class="navbar navbar-expand-lg  bg-green">
             <div class="container-fluid bg-green">
@@ -151,18 +161,17 @@
                 
                 <div class="col-md-6 col-12 main-text-box">
                   <div class="main-text">
-                    <div class="decorative-circle"></div>
                     <p class="main-txt-p1">
-                      <div class="bee-icon">
+                      <div class="bee-icon unselectable">
                           <img src="../static/media/sitephotos/bee-icon.webp" alt="bee">
                       </div>
-                      <span class="fs-3 roboto-bold-italic playfair main-txt-frst">
+                      <span class=" fs-3 roboto-bold-italic playfair main-txt-frst">
                         Veb sayt yaratish - MAGICSITE
                       </span>
                     </p>
                     <h2 class="fs-1 roboto-black  playfair">Sifatli Arzon va Tezkor veb-sayt yaratish xizmati</h2>
                   </div>
-                  <div class="main-text-plus">
+                  <div class="main-text-plus unselectable">
                     <div class="main-site-text">
                         <p >
                             <i class="fa-solid fa-code"></i>
@@ -183,7 +192,7 @@
                       
                     </div>
                   </div>
-                  <div class="main-text-buttons">
+                  <div class="main-text-buttons unselectable">
                     <a href="#" class="button-dark btn-dark roboto-medium">
                       Batafsil <i class="fa-solid fa-turn-down"></i>
                     </a>
@@ -206,8 +215,21 @@
         </header>
 <!--End Header section-->
 
+<!--between animation-->
+<div class="text-container_btw unselectable" id="#between-animation-1">
+  <div class="text-wrapper_btw">
+    <div class="text-slide_btw fs-1 roboto-medium ">
+      Veb sayt yaratish xizmati / Ishonchli, tezkor, Hamyonbop, Biznesingizni rivojlantirish uchun eng yaxshi yechim / Avtomatlashtirilgan tizimlar
+    </div>
+    <div class="text-slide_btw fs-1 roboto-medium ">
+      Veb sayt yaratish xizmati / Ishonchli, tezkor, Hamyonbop, Biznesingizni rivojlantirish uchun eng yaxshi yechim / Avtomatlashtirilgan tizimlar
+    </div>
+  </div>
+</div>
+<!--End beetween animation-->
+
 <!--Second section-->
-        <section class="second-section py-5">
+        <section class="second-section py-5" id="#second-section">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 col-12 second-section-img">
@@ -221,52 +243,62 @@
                   <h2 class="fs-3 roboto-black playfair">
                     Eng ko'p beriladigan savollar:
                   </h2>
-                  <!--Collapse 1-->
-                  <p class="second-section-collapse-item d-inline-flex gap-1">
-                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-1" role="button" aria-expanded="false" aria-controls="Second-section-collapse-1">
-                      Nega narxlar arzon?
-                    </a>
-                  </p>
-                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-1">
-                    <div class="card card-body">
-                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                
+                  <div class="accordion" id="faqAccordion">
+                    <!-- Collapse 1 -->
+                    <div class="accordion-item custom-accordion">
+                      <p class="second-section-collapse-item d-inline-flex gap-1">
+                        <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-1" role="button" aria-expanded="false" aria-controls="Second-section-collapse-1">
+                          Nega narxlar arzon?
+                        </a>
+                      </p>
+                      <div class="collapse custom-collapse" id="Second-section-collapse-1" data-bs-parent="#faqAccordion">
+                        <div class="card card-body">
+                          Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <!--Collapse 2-->
-                  <div></div>
-                  <p class="second-section-collapse-item d-inline-flex gap-1">
-                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-2" role="button" aria-expanded="false" aria-controls="Second-section-collapse-2">
-                      Nega narxlar arzon?
-                    </a>
-                  </p>
-                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-2">
-                    <div class="card card-body">
-                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                
+                    <!-- Collapse 2 -->
+                    <div class="accordion-item custom-accordion">
+                      <p class="second-section-collapse-item d-inline-flex gap-1">
+                        <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-2" role="button" aria-expanded="false" aria-controls="Second-section-collapse-2">
+                          Xizmat ko'rsatish sifati qanday?
+                        </a>
+                      </p>
+                      <div class="collapse custom-collapse" id="Second-section-collapse-2" data-bs-parent="#faqAccordion">
+                        <div class="card card-body">
+                          Xizmatlarimiz doimiy sifatni ta'minlash uchun maxsus jarayonlar asosida amalga oshiriladi. Bu bizning asosiy ustuvorligimizdir.
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <!--Collapse 3-->
-                  <div></div>
-                  <p class="second-section-collapse-item d-inline-flex gap-1">
-                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-3" role="button" aria-expanded="false" aria-controls="Second-section-collapse-3">
-                      Nega narxlar arzon?
-                    </a>
-                  </p>
-                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-3">
-                    <div class="card card-body">
-                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                
+                    <!-- Collapse 3 -->
+                    <div class="accordion-item custom-accordion">
+                      <p class="second-section-collapse-item d-inline-flex gap-1">
+                        <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-3" role="button" aria-expanded="false" aria-controls="Second-section-collapse-3">
+                          Loyihalar qancha vaqtda tayyor bo'ladi?
+                        </a>
+                      </p>
+                      <div class="collapse custom-collapse" id="Second-section-collapse-3" data-bs-parent="#faqAccordion">
+                        <div class="card card-body">
+                          Loyihalar muddati loyiha murakkabligiga qarab belgilanadi, odatda 7-14 kun ichida tugallanadi.
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <!--Collapse 4-->
-                  <div></div>
-                  <p class="second-section-collapse-item d-inline-flex gap-1">
-                    <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-4" role="button" aria-expanded="false" aria-controls="Second-section-collapse-4">
-                      Nega narxlar arzon?
-                    </a>
-                  </p>
-                  
-                  <div class="collapse second-section-collapse-item-inner" id="Second-section-collapse-4">
-                    <div class="card card-body">
-                      Haqiqatda sifatga nisbatan narxlarimiz arzon. Sababi veb studiyamizda ortiqcha ish kuchi bo'lmaganligi sabab, ortiqcha harajatimiz yo'q. Shuning uchun boshqalarga nisbatan bizda ancha arzon.
+                
+                    <!-- Collapse 4 -->
+                    <div class="accordion-item custom-accordion">
+                      <p class="second-section-collapse-item d-inline-flex gap-1">
+                        <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-4" role="button" aria-expanded="false" aria-controls="Second-section-collapse-4">
+                          Qo'shimcha xizmatlar bormi?
+                        </a>
+                      </p>
+                      <div class="collapse custom-collapse" id="Second-section-collapse-4" data-bs-parent="#faqAccordion">
+                        <div class="card card-body">
+                          Biz qo'shimcha xizmatlar sifatida texnik ko'mak, loyiha optimizatsiyasi va konsaltingni taklif qilamiz.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -276,8 +308,25 @@
         </section>
 <!--End second section-->
 
-        <footer class="footer-section mt-5 px-3 py-5">
-            <div class="container-fluid">
+
+<!--Third section-->
+        <section class="third-section" id="#third-section">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+
+              </div>
+              <div class="col">
+
+              </div>
+            </div>
+          </div>
+        </section>
+<!--End third section-->
+
+<!--Footer section-->
+        <footer class="footer-section mt-5 px-3 py-5 ">
+            <div class="container-fluid unselectable">
                 <div class="row txt-green-grey">
                     <div class="col-lg-4 col-12 my-3">
                         <h5 class="text-center h5 fs-4"><a class="text-decoration-none" href="http://navruzbro.uz" target="_blank"><span class="playfair txt-green-grey" >MagicSiteUz - 2024-2025</span></a></h5>
@@ -320,6 +369,7 @@
                 </div>
             </div>
         </footer>
+<!--END footer section-->
         
         <!--Js script-->
            <script src="../static/js/main.js"></script>
