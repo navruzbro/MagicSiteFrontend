@@ -31,9 +31,30 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       loader.style.display = "none"; // Loaderni butunlay o'chirish
       content.style.display = "block"; // Kontentni ko‘rsatish
-    }, 1000); // Animatsiya davomiyligiga mos ravishda kutish
-  }, 2000); // 2 soniya yuklashni kutish
+    }, 300); // Animatsiya davomiyligiga mos ravishda kutish
+  }, 500); // 2 soniya yuklashni kutish
 });
 
+// code for white/dark mode 
+// Toggle Theme Button
+const themeToggle = document.getElementById("theme-toggle");
 
+// Check user preference or default to light
+const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const savedTheme = localStorage.getItem("theme");
+let currentTheme = savedTheme || (userPrefersDark ? "dark" : "light");
+
+// Apply the saved or detected theme
+document.documentElement.setAttribute("data-theme", currentTheme);
+
+// Update button text based on theme
+themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+// Toggle theme logic
+themeToggle.addEventListener("click", () => {
+    currentTheme = currentTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    localStorage.setItem("theme", currentTheme); // Save user's choice
+    themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+});
 

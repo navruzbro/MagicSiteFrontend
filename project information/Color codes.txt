@@ -8,3 +8,11 @@ Keyinroq asosiy sahifani main qismini
  animatsiyalar qo'shish sekin sekin qo'shimchalar
   qo'shib borish va o'zgaritirib mukammallashtirib borish
 
+Qilinishi kerak bo'lgan ishlar:
+    Qo'shimcha sahifalar qo'shish
+    Kodlarni taxlash -
+    Qo'shimcha sahifalar uchun kod yozib chiqish
+    Qo'shimcha animatsiyalar 
+    tungi va kunduzgi rejimlarni qo'shish 9 
+
+
