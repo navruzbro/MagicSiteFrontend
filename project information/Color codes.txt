@@ -14,5 +14,6 @@ Qilinishi kerak bo'lgan ishlar:
     Qo'shimcha sahifalar uchun kod yozib chiqish
     Qo'shimcha animatsiyalar 
     tungi va kunduzgi rejimlarni qo'shish 9 
+    loader classlarini murakkabroq qi
 
 

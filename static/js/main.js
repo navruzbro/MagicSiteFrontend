@@ -35,11 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 500); // 2 soniya yuklashni kutish
 });
 
-// code for white/dark mode 
-// Toggle Theme Button
+// code for light/dark mode 
+// Elements
 const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
 
-// Check user preference or default to light
+// Determine user's system preference
 const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const savedTheme = localStorage.getItem("theme");
 let currentTheme = savedTheme || (userPrefersDark ? "dark" : "light");
@@ -47,14 +48,22 @@ let currentTheme = savedTheme || (userPrefersDark ? "dark" : "light");
 // Apply the saved or detected theme
 document.documentElement.setAttribute("data-theme", currentTheme);
 
-// Update button text based on theme
-themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+// Toggle theme button icon
+const updateIcon = () => {
+    if (currentTheme === "dark") {
+        themeIcon.style.transform = "rotate(0deg)";
+    } else {
+        themeIcon.style.transform = "rotate(180deg)";
+    }
+};
 
-// Toggle theme logic
+// Update icon initially
+updateIcon();
+
+// Toggle theme on button click
 themeToggle.addEventListener("click", () => {
     currentTheme = currentTheme === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", currentTheme);
-    localStorage.setItem("theme", currentTheme); // Save user's choice
-    themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+    localStorage.setItem("theme", currentTheme);
+    updateIcon();
 });
-

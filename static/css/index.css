@@ -96,7 +96,7 @@ body{
   align-items: center;
   flex-direction: column;
   z-index: 9999;
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Animatsiya */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Animatsiya */
   font-family: 'Roboto', sans-serif;
 }
 
@@ -107,16 +107,16 @@ body{
 .loader-container p {
   margin-top: 20px;
   font-size: 18px;
-  color: var(--text-color);;
+  color: var(--text-color);
   font-weight: bold;
 }
 
 
 /* Loaderni yo'qolishi uchun holat */
 .loader-container.hidden {
-  opacity: 0; /* Ko‘rinmas holatga o‘tadi */
-  transform: scale(0.8); /* Kichrayadi */
-  pointer-events: none; /* Endi hech qanday ta’sir qilmaydi */
+  opacity: 0;
+  transform: scale(0.6); 
+  pointer-events: none; 
 }
 
 /* Kontentning boshlang'ich holati */
@@ -365,6 +365,48 @@ button {
   color:#c5f0a4;
   border:2.2px solid #2a2a2a;
 }
+
+.toggle-theme-button-light-night{
+  width: 60px; /* Tugma kattaligi */
+  height: 60px;
+  background-color: var(--button-bg-color); /* Tugma fon rangi */
+  border: none; /* Borderni olib tashlash */
+  border-radius: 50%; /* Dumaloq shakl */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tugmaga soyani qo‘shish */
+  transition: background-color 0.5s ease, transform 0.3s ease;
+  position:absolute;
+  right:1rem;
+}
+
+.toggle-theme-button-light-night:hover{
+  transform: scale(1.1);
+}
+
+
+.toggle-theme-button-light-night-icon {
+  width: 30px; /* Icon kattaligi */
+  height: 30px;
+  background-color: #fff /* Icon rangi */;
+  mask-image: url('../media/icons/sun.svg'); /* Quyosh tasviri (kunduzgi rejim) */
+  mask-size: contain; /* Iconni tugma ichiga moslashtirish */
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('../media/icons/sun.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+[data-theme="dark"] .toggle-theme-button-light-night-icon {
+  mask-image: url('../media/icons/moon.svg'); /* Oy tasviri (tungi rejim) */
+    -webkit-mask-image: url('../media/icons/moon.svg');
+}
+
 
 /*Navbar section styles*/
 .navbar{
