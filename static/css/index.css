@@ -15,6 +15,12 @@
       --button-text-color-dark: #c5f0a4;/* button dark color */
       --main-site-text-p-i-bg: rgba(0, 0, 0, 0.2);
       --main-site-text-p-i-box-shadow: rgba(0, 0, 0, 0.25);
+
+     
+        --particle-color-day: #000000; /* Kunduzgi rejim uchun */
+        --particle-color-night: #ffffff; /* Tungi rejim uchun */
+   
+    
     }
 
     /* Dark mode theme */
@@ -102,12 +108,11 @@ html{
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10; /* Faqat fon sifatida ishlatiladi */
+  z-index: 4; 
+  pointer-events: none; 
 }
 
-  
-
-/*loader animation*/
+/*LOADER ANIMATION*/
 /* Loader container */
 .loader-container {
   position: fixed;
@@ -437,6 +442,7 @@ button {
 .navbar{
   background-color: var(--navbar-bg-color);
   transition: background-color 0.4s ease;
+  z-index:10;
 }
 
 .navbar-brand img{
@@ -829,7 +835,20 @@ button {
   background-color: var(--bg-color);
   transition: background-color 0.4s ease, color 0.4s ease;
 }
+.third-section-head{
+  height:2px;
+  background-color:var(--text-black-a9e978);
+  position:relative;
+}
 
+.third-section-head h3{
+  border-radius:0.1px;
+  padding:0.3rem 0.6rem;
+  border:2px solid var(--text-black-a9e978);
+  display:inline-block;
+  background-color: var(--bg-color);
+  color: var(--text-black-a9e978);
+}
 /*END THIRD SECTION*/
 
 
@@ -837,10 +856,20 @@ button {
 /*footer section*/
 .footer-section{
   background-color: #000;
+  z-index:2;
 }
 
 
 
+[data-theme="dark"] {
+  background-color: #121212;
+  color: white;
+}
+
+[data-theme="light"] {
+  background-color: white;
+  color: black;
+}
 
 
 

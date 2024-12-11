@@ -1,0 +1,161 @@
+// 1. Scroll effekti uchun kod
+const elements = document.querySelectorAll('.scrolleffect');
+
+// Scroll vaqtida kuzatish funksiyasi
+function handleScroll() {
+  elements.forEach((element) => {
+    const elementPosition = element.getBoundingClientRect().top; // Elementning yuqori pozitsiyasi
+    const windowHeight = window.innerHeight; // Oynaning balandligi
+
+    // Agar element ko'rinish maydoniga kirsagina `show` sinfini qo'sh
+    if (elementPosition < windowHeight - 100) {
+      element.classList.add('show');
+    }
+  });
+}
+
+// Scroll hodisasini tinglash
+window.addEventListener('scroll', handleScroll);
+
+// Boshlanishda elementlarni tekshirish
+handleScroll();
+
+// 2. Loader animatsiyasi
+document.addEventListener("DOMContentLoaded", function () {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  // 2 soniyadan keyin loaderni yo'q qilish
+  setTimeout(() => {
+    loader.classList.add("hidden"); // Loaderga animatsiya klassi qo'shildi
+    setTimeout(() => {
+      loader.style.display = "none"; // Loaderni butunlay o'chirish
+      content.style.display = "block"; // Kontentni ko‘rsatish
+    }, 300); // Animatsiya davomiyligiga mos ravishda kutish
+  }, 500); // 2 soniya yuklashni kutish
+});
+
+// 3. Light/Dark rejim kodlari
+// Elementlarni tanlash
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
+const logo = document.getElementById("magicsite-logo");
+
+// Qurilma sozlamalariga mos dastlabki rejimni aniqlash
+const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const savedTheme = localStorage.getItem("theme");
+let currentTheme = savedTheme || (userPrefersDark ? "dark" : "light");
+
+// HTML tagiga tema atributini qo'shish
+document.documentElement.setAttribute("data-theme", currentTheme);
+
+// Logotip va tema tugmachasi ikonkasini yangilash
+const updateTheme = () => {
+  if (currentTheme === "dark") {
+    themeIcon.style.transform = "rotate(0deg)";
+    logo.src = "./static/media/logo/magicsitelight.PNG"; // Tungi rejim logotipi
+  } else {
+    themeIcon.style.transform = "rotate(180deg)";
+    logo.src = "./static/media/logo/magicsitetext.PNG"; // Kunduzgi rejim logotipi
+  }
+};
+
+// Boshlang'ich rejimni sozlash
+updateTheme();
+
+// Tugma bosilganda tema va logotipni o'zgartirish
+themeToggle.addEventListener("click", () => {
+  currentTheme = currentTheme === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  localStorage.setItem("theme", currentTheme); // Tanlangan rejimni saqlash
+  updateTheme(); // Logotipni va tugmachani yangilash
+});
+
+// Canvasni tanlash
+const canvas = document.getElementById("animation-canvas");
+const ctx = canvas.getContext("2d");
+
+// Canvas o'lchamlarini sozlash
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+// Zarracha obyekti
+class Particle {
+  constructor(x, y, size, speedX, speedY, color) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.speedX = speedX;
+    this.speedY = speedY;
+    this.color = color;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    // Ekrandan chiqib ketgan zarrachalarni qayta joylashtirish
+    if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+    if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+  }
+}
+
+// Zarrachalar massivi
+const particles = [];
+const particleCount = 50;
+
+// Zarrachalarni yaratish
+function createParticles(color) {
+  particles.length = 0; // Eski zarrachalarni tozalash
+  for (let i = 0; i < particleCount; i++) {
+    const size = Math.random() * 3 + 1; // Zarrachalar kattaligi
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height;
+    const speedX = Math.random() * 1 - 0.5; // Harakat tezligi
+    const speedY = Math.random() * 1 - 0.5;
+    particles.push(new Particle(x, y, size, speedX, speedY, color));
+  }
+}
+
+// Dastlabki tema va rangni o‘rnatish
+let currentThemeCanvas = localStorage.getItem("theme-canvas") || "light";
+const updateParticles = () => {
+  const color = currentThemeCanvas === "dark" 
+    ? `rgba(255, 255, 255, ${Math.random()})` 
+    : `rgba(0, 0, 0, ${Math.random()})`;
+  createParticles(color);
+};
+updateParticles();
+
+// Theme tugmasi funksiyasi
+const themeToggleCanvas = document.getElementById("theme-toggle-canvas");
+themeToggleCanvas.addEventListener("click", () => {
+  currentThemeCanvas = currentThemeCanvas === "dark" ? "light" : "dark";
+  localStorage.setItem("theme-canvas", currentThemeCanvas);
+  document.documentElement.setAttribute("data-theme", currentThemeCanvas);
+  updateParticles();
+});
+
+// Animatsiya funksiyasi
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Canvasni tozalash
+  particles.forEach((particle) => {
+    particle.update();
+    particle.draw();
+  });
+  requestAnimationFrame(animate); // Animatsiyani davom ettirish
+}
+
+// Animatsiyani boshlash
+animate();

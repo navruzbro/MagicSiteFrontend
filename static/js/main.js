@@ -1,23 +1,18 @@
 // 1. Scroll effekti uchun kod
 const elements = document.querySelectorAll('.scrolleffect');
 
-// Scroll vaqtida kuzatish funksiyasi
 function handleScroll() {
   elements.forEach((element) => {
-    const elementPosition = element.getBoundingClientRect().top; // Elementning yuqori pozitsiyasi
-    const windowHeight = window.innerHeight; // Oynaning balandligi
+    const elementPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-    // Agar element ko'rinish maydoniga kirsagina `show` sinfini qo'sh
     if (elementPosition < windowHeight - 100) {
       element.classList.add('show');
     }
   });
 }
 
-// Scroll hodisasini tinglash
 window.addEventListener('scroll', handleScroll);
-
-// Boshlanishda elementlarni tekshirish
 handleScroll();
 
 // 2. Loader animatsiyasi
@@ -25,54 +20,49 @@ document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
   const content = document.getElementById("content");
 
-  // 2 soniyadan keyin loaderni yo'q qilish
   setTimeout(() => {
-    loader.classList.add("hidden"); // Loaderga animatsiya klassi qo'shildi
+    loader.classList.add("hidden");
     setTimeout(() => {
-      loader.style.display = "none"; // Loaderni butunlay o'chirish
-      content.style.display = "block"; // Kontentni ko‘rsatish
-    }, 300); // Animatsiya davomiyligiga mos ravishda kutish
-  }, 500); // 2 soniya yuklashni kutish
+      loader.style.display = "none";
+      content.style.display = "block";
+    }, 300);
+  }, 500);
 });
 
 // 3. Light/Dark rejim kodlari
-// Elementlarni tanlash
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 const logo = document.getElementById("magicsite-logo");
 
-// Qurilma sozlamalariga mos dastlabki rejimni aniqlash
 const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const savedTheme = localStorage.getItem("theme");
 let currentTheme = savedTheme || (userPrefersDark ? "dark" : "light");
 
-// HTML tagiga tema atributini qo'shish
 document.documentElement.setAttribute("data-theme", currentTheme);
 
-// Logotip va tema tugmachasi ikonkasini yangilash
 const updateTheme = () => {
   if (currentTheme === "dark") {
     themeIcon.style.transform = "rotate(0deg)";
-    logo.src = "./static/media/logo/magicsitelight.PNG"; // Tungi rejim logotipi
+    logo.src = "./static/media/logo/magicsitelight.PNG";
   } else {
     themeIcon.style.transform = "rotate(180deg)";
-    logo.src = "./static/media/logo/magicsitetext.PNG"; // Kunduzgi rejim logotipi
+    logo.src = "./static/media/logo/magicsitetext.PNG";
   }
 };
 
-// Boshlang'ich rejimni sozlash
 updateTheme();
 
-// Tugma bosilganda tema va logotipni o'zgartirish
 themeToggle.addEventListener("click", () => {
   currentTheme = currentTheme === "dark" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", currentTheme);
-  localStorage.setItem("theme", currentTheme); // Tanlangan rejimni saqlash
-  updateTheme(); // Logotipni va tugmachani yangilash
+  localStorage.setItem("theme", currentTheme);
+  updateTheme();
 });
 
 
-//CANVAS ANIMATION
+
+
+//CANVAS
 // Canvasni tanlash
 const canvas = document.getElementById("animation-canvas");
 const ctx = canvas.getContext("2d");
@@ -141,3 +131,4 @@ function animate() {
 
 // Animatsiyani boshlash
 animate();
+

@@ -4,6 +4,7 @@
  #ffffff
 
  &nbsp; -> Space
+  pointer-events: none /*Bosib bo'lmaydigan qiladi*/
 
 Keyinroq asosiy sahifani main qismini
  orqa fonini o'zgartirish va qo'shimcha 
