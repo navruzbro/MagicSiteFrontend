@@ -1,13 +1,5 @@
 <!DOCTYPE html>
-<!--
-    MagicSite 
 
-    Color codes:
-        #c5f0a4  #111111
-        #e1f7d0  #a9e978
-        #2a2a2a  #000000
-
--->
 <html data-site-author="Navruz" lang="uz" charset="UTF-8" >
     <head>
        <!--Meta tags--> 
@@ -117,10 +109,13 @@
 </div>
 <!--End Loader animation-->
 
+<!--Canvas animation-->
+<canvas id="animation-canvas"></canvas>
+
 <!--Navbar section-->
-        <nav class="navbar navbar-expand-lg  bg-green">
-            <div class="container-fluid bg-green">
-              <a class="navbar-brand" href="#" target="_blank"><img src="./static/media/logo/magicsitetext.PNG" alt="MagicSiteUz"> </a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" target="_blank"><img id="magicsite-logo" src="./static/media/logo/magicsitetext.PNG" alt="MagicSiteUz"> </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -142,8 +137,8 @@
                     <a class="nav-link fs-4 roboto-medium playfair" href="#" >Aloqa</a>
                   </li>
                 </ul>
-                <div class="">
-                  <a href="tel://+998886343707" class="text-decoration-none text-black roboto-bold fs-5">
+                <div class="navbar-over-phone-number">
+                  <a href="tel://+998886343707" class="text-decoration-none roboto-bold fs-5">
                     <i class="fa-solid fa-phone"></i>
                      +998 886 34 37 07
                   </a>
@@ -170,10 +165,10 @@
                           <img src="./static/media/sitephotos/bee-icon.webp" alt="bee">
                       </div>
                       <span class=" fs-3 roboto-bold-italic playfair main-txt-frst">
-                        Veb sayt yaratish - MAGICSITE
+                        Veb sayt yaratish - <span class="text-color-white"> MAGICSITE</span>
                       </span>
                     </p>
-                    <h2 class="fs-1 roboto-black  playfair">Sifatli Arzon va Tezkor veb-sayt yaratish xizmati</h2>
+                    <h2 class="fs-1 roboto-black  playfair text-color-white">Sifatli Arzon va Tezkor veb-sayt yaratish xizmati</h2>
                   </div>
                   <div class="main-text-plus unselectable">
                     <div class="main-site-text">
@@ -224,10 +219,16 @@
 <div class="text-container_btw unselectable" id="#between-animation-1">
   <div class="text-wrapper_btw">
     <div class="text-slide_btw fs-1 roboto-medium ">
-      Veb sayt yaratish xizmati / Ishonchli, tezkor, Hamyonbop, Biznesingizni rivojlantirish uchun eng yaxshi yechim / Avtomatlashtirilgan tizimlar
+      <span class="span_1"> Veb sayt yaratish xizmati </span>
+      <span class="span_2" > / Ishonchli, tezkor, Hamyonbop </span> 
+      <span class="span_1"> / Biznesingizni rivojlantirish uchun eng yaxshi yechim </span>
+      <span class="span_2"> / Avtomatlashtirilgan tizimlar &nbsp;</span>
     </div>
     <div class="text-slide_btw fs-1 roboto-medium ">
-      Veb sayt yaratish xizmati / Ishonchli, tezkor, Hamyonbop, Biznesingizni rivojlantirish uchun eng yaxshi yechim / Avtomatlashtirilgan tizimlar
+      <span class="span_1"> Veb sayt yaratish xizmati </span>
+      <span class="span_2" > / Ishonchli, tezkor, Hamyonbop </span> 
+      <span class="span_1"> / Biznesingizni rivojlantirish uchun eng yaxshi yechim </span>
+      <span class="span_2"> / Avtomatlashtirilgan tizimlar &nbsp;</span>
     </div>
   </div>
 </div>
@@ -317,10 +318,16 @@
 <div class="text-container_btw unselectable" id="#between-animation-2">
   <div class="text-wrapper_btw">
     <div class="text-slide_btw fs-1 roboto-medium ">
-      Veb sayt yaratish xizmati / Ishonchli, tezkor, Hamyonbop, Biznesingizni rivojlantirish uchun eng yaxshi yechim / Avtomatlashtirilgan tizimlar
+      <span class="span_1"> Veb sayt yaratish xizmati </span>
+      <span class="span_2" > / Ishonchli, tezkor, Hamyonbop </span> 
+      <span class="span_1"> / Biznesingizni rivojlantirish uchun eng yaxshi yechim </span>
+      <span class="span_2"> / Avtomatlashtirilgan tizimlar  &nbsp;</span>
     </div>
     <div class="text-slide_btw fs-1 roboto-medium ">
-      Veb sayt yaratish xizmati / Ishonchli, tezkor, Hamyonbop, Biznesingizni rivojlantirish uchun eng yaxshi yechim / Avtomatlashtirilgan tizimlar
+      <span class="span_1"> Veb sayt yaratish xizmati </span>
+      <span class="span_2" > / Ishonchli, tezkor, Hamyonbop </span> 
+      <span class="span_1"> / Biznesingizni rivojlantirish uchun eng yaxshi yechim </span>
+      <span class="span_2"> / Avtomatlashtirilgan tizimlar  &nbsp;</span>
     </div>
   </div>
 </div>
@@ -336,7 +343,7 @@
             </div>
             <div class="row">
               <div class="col">
-                <button id="theme-toggle">Toggle Theme</button>
+                
               </div>
               <div class="col">
 
@@ -392,6 +399,8 @@
             </div>
         </footer>
 <!--END footer section-->
+
+
         
         <!--Js script-->
            <script src="./static/js/main.js"></script>

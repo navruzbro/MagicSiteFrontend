@@ -1,4 +1,4 @@
-// Barcha elementlarni olish
+// 1. Scroll effekti uchun kod
 const elements = document.querySelectorAll('.scrolleffect');
 
 // Scroll vaqtida kuzatish funksiyasi
@@ -20,7 +20,7 @@ window.addEventListener('scroll', handleScroll);
 // Boshlanishda elementlarni tekshirish
 handleScroll();
 
-//Loader animatsiyasi
+// 2. Loader animatsiyasi
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
   const content = document.getElementById("content");
@@ -35,35 +35,109 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 500); // 2 soniya yuklashni kutish
 });
 
-// code for light/dark mode 
-// Elements
+// 3. Light/Dark rejim kodlari
+// Elementlarni tanlash
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
+const logo = document.getElementById("magicsite-logo");
 
-// Determine user's system preference
+// Qurilma sozlamalariga mos dastlabki rejimni aniqlash
 const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const savedTheme = localStorage.getItem("theme");
 let currentTheme = savedTheme || (userPrefersDark ? "dark" : "light");
 
-// Apply the saved or detected theme
+// HTML tagiga tema atributini qo'shish
 document.documentElement.setAttribute("data-theme", currentTheme);
 
-// Toggle theme button icon
-const updateIcon = () => {
-    if (currentTheme === "dark") {
-        themeIcon.style.transform = "rotate(0deg)";
-    } else {
-        themeIcon.style.transform = "rotate(180deg)";
-    }
+// Logotip va tema tugmachasi ikonkasini yangilash
+const updateTheme = () => {
+  if (currentTheme === "dark") {
+    themeIcon.style.transform = "rotate(0deg)";
+    logo.src = "./static/media/logo/magicsitelight.PNG"; // Tungi rejim logotipi
+  } else {
+    themeIcon.style.transform = "rotate(180deg)";
+    logo.src = "./static/media/logo/magicsitetext.PNG"; // Kunduzgi rejim logotipi
+  }
 };
 
-// Update icon initially
-updateIcon();
+// Boshlang'ich rejimni sozlash
+updateTheme();
 
-// Toggle theme on button click
+// Tugma bosilganda tema va logotipni o'zgartirish
 themeToggle.addEventListener("click", () => {
-    currentTheme = currentTheme === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", currentTheme);
-    localStorage.setItem("theme", currentTheme);
-    updateIcon();
+  currentTheme = currentTheme === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", currentTheme);
+  localStorage.setItem("theme", currentTheme); // Tanlangan rejimni saqlash
+  updateTheme(); // Logotipni va tugmachani yangilash
 });
+
+
+//CANVAS ANIMATION
+// Canvasni tanlash
+const canvas = document.getElementById("animation-canvas");
+const ctx = canvas.getContext("2d");
+
+// Canvas o'lchamlarini sozlash
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+// Zarracha obyekti
+class Particle {
+  constructor(x, y, size, speedX, speedY, color) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+    this.speedX = speedX;
+    this.speedY = speedY;
+    this.color = color;
+  }
+
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    // Ekrandan chiqib ketgan zarrachalarni qayta joylashtirish
+    if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+    if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+  }
+}
+
+// Zarrachalar massivi
+const particles = [];
+const particleCount = 50;
+
+// Zarrachalarni yaratish
+for (let i = 0; i < particleCount; i++) {
+  const size = Math.random() * 3 + 1; // Zarrachalar kattaligi
+  const x = Math.random() * canvas.width;
+  const y = Math.random() * canvas.height;
+  const speedX = Math.random() * 1 - 0.5; // Harakat tezligi
+  const speedY = Math.random() * 1 - 0.5;
+  const color = `rgba(255, 255, 255, ${Math.random()})`; // Oq va shaffof rang
+
+  particles.push(new Particle(x, y, size, speedX, speedY, color));
+}
+
+// Animatsiya funksiyasi
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Canvasni tozalash
+  particles.forEach((particle) => {
+    particle.update();
+    particle.draw();
+  });
+  requestAnimationFrame(animate); // Animatsiyani davom ettirish
+}
+
+// Animatsiyani boshlash
+animate();

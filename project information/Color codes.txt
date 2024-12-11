@@ -1,7 +1,9 @@
  #c5f0a4  #111111
  #e1f7d0  #a9e978
  #2a2a2a  #000000
+ #ffffff
 
+ &nbsp; -> Space
 
 Keyinroq asosiy sahifani main qismini
  orqa fonini o'zgartirish va qo'shimcha 
@@ -16,4 +18,4 @@ Qilinishi kerak bo'lgan ishlar:
     tungi va kunduzgi rejimlarni qo'shish 9 
     loader classlarini murakkabroq qi
 
-
+Scrolleffectga ikkinchi srolleffectlarini qo'shish... sayt ko'rinishini chiroylilash

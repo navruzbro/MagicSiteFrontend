@@ -1,42 +1,57 @@
-/*
-White/Dark mode css styles
-*/
-/* Root element: default (light mode) */
-:root {
-  --bg-color: #c5f0a4;          /* Asosiy fon rangi */
-  --text-color: #2a2a2a;        /* Matn rangi */
-  --navbar-bg-color: #a9e978;   /* Header fon rangi */
-  --button-bg-color: #c5f0a4; 
-  --button-bg-color-dark: #4caf50;/* Tugma fon rangi */
-  --button-text-color: #ffffff; /* Tugma matn rangi */
-}
+/*Light/night mode styles*/
+    /* Root element: default (light mode) */
+    :root {
+      --bg-color: #c5f0a4;          /* Main background color */
+      --text-color: #2a2a2a;        /* Main text color */
+      --nav-text-color:#324524;     /* Nav text color*/
+      --nav-text-color-active: #000;  /*Nav text color active*/
+      --text-black-white: #000;       /* Text black white*/
+      --text-black-a9e978: #000;     /*tetx black #a9e978*/
+      --text-between-animation-1: #004d40;    /*Text between color*/
+      --navbar-bg-color: #a9e978;   /* Navbar bg color */
+      --button-bg-color: #c5f0a4;   /* Button bg color */
+      --button-text-color: #2a2a2a; /* button color */
+      --button-bg-color-dark: #2a2a2a;/* Button dark bg color */
+      --button-text-color-dark: #c5f0a4;/* button dark color */
+      --main-site-text-p-i-bg: rgba(0, 0, 0, 0.2);
+      --main-site-text-p-i-box-shadow: rgba(0, 0, 0, 0.25);
+    }
 
-/* Dark mode theme */
-[data-theme="dark"] {
-  --bg-color: #1e1e1e;          /* Asosiy fon rangi */
-  --text-color: #c5f0a4;        /* Matn rangi */
-  --navbar-bg-color: #111111;   /* Header fon rangi */
-  --button-bg-color: #4a4a4a;   /* Tugma fon rangi */
-  --button-text-color: #c5f0a4; /* Tugma matn rangi */
-}
+    /* Dark mode theme */
+    [data-theme="dark"] {
+      --bg-color: #1e1e1e;          
+      --text-color: #c5f0a4; 
+      --nav-text-color:#b0b0b0; 
+      --nav-text-color-active: #ffffff;  
+      --text-black-white: #fff;
+      --text-black-a9e978: #a9e978;
+      --text-between-animation-1: #004d40;      
+      --navbar-bg-color: #111111;  
+      --button-bg-color: #2a2a2a;  
+      --button-text-color: #C5F0A4; 
+      --button-bg-color-dark: #2a2a2a;
+      --button-text-color-dark: #c5f0a4;
 
-/* Apply variables */
+      --main-site-text-p-i-bg: rgba(0, 0, 0, 0.2);
+      --main-site-text-p-i-box-shadow: rgba(0, 0, 0, 0.25);
+    }
+
+.text-color-white{
+  color: var(--text-black-white)!important;
+}
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-
+  font-family:  "Roboto", sans-serif;
+  transition: background-color 0.3s ease-in, color 0.3 ease-in;
 }
 
 html{
   background-color: var(--bg-color);
   font-size: 16px; /* 1rem=16px */
+  transition: background-color 0.3s ease-in, color 0.3 ease-in;
 }
 
-body{
-  font-family:  "Roboto", sans-serif;
-}
-
-  
   ::selection {
     background: #a9e978; 
     color: #2a2a2a;      
@@ -80,6 +95,16 @@ body{
     }
   }
 
+/*Canvas animation*/
+#animation-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Faqat fon sifatida ishlatiladi */
+}
+
   
 
 /*loader animation*/
@@ -122,7 +147,7 @@ body{
 /* Kontentning boshlang'ich holati */
 #content {
   font-family: 'Roboto', sans-serif;
-  color: #111111;
+  color: var(--text-black-white);
   padding: 50px;
 }
 
@@ -149,21 +174,21 @@ body{
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid #2a2a2a;
+  border-bottom: 3px solid var(--text-black-white);
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
-  border-right: 3px solid #2a2a2a;
+  border-right: 3px solid var(--text-color);
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;
-  border-top: 3px solid #2a2a2a;
+  border-top: 3px solid var(--text-black-white);
 }
 
 @keyframes rotate-one {
@@ -302,13 +327,13 @@ body{
 
 .scrolleffect {
   opacity: 0;
-  transform: translateY(20px);
+  transform: scale(0.9) translateY(2rem);
   transition: all 1.5s ease-out;
 }
 
 .scrolleffect.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1) translateY(0);
 }
 
 /*end txt styles*/
@@ -331,20 +356,20 @@ button {
 .btn-dark{
   display: inline-block;
   font-size:1rem;
-  color: #c5f0a4;
   text-decoration: none;
-  background-color: #2a2a2a;
   padding: 0.6rem 2rem;
   border-radius:8px 0 8px 0;
   border:2px solid transparent;
   cursor:pointer;
+  background-color: var(--button-bg-color-dark);
+  color: var(--button-text-color-dark);
   transition:all 0.3s ease-in-out;
 }
 
 .btn-dark:hover{
-  background-color: #c5f0a4;
-  color:#2a2a2a;
-  border:2px solid #2a2a2a;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border:2px solid var(--button-text-color);
 }
 
 .btn-white{
@@ -361,9 +386,9 @@ button {
 }
 
 .btn-white:hover{
-  background-color: #2a2a2a;
-  color:#c5f0a4;
-  border:2.2px solid #2a2a2a;
+  background-color: var(--button-bg-color-dark);
+  color: var(--button-text-color-dark);
+  border:2.2px solid var(--button-text-color-dark);
 }
 
 .toggle-theme-button-light-night{
@@ -390,7 +415,7 @@ button {
 .toggle-theme-button-light-night-icon {
   width: 30px; /* Icon kattaligi */
   height: 30px;
-  background-color: #fff /* Icon rangi */;
+  background-color: var(--text-black-white) /* Icon rangi */;
   mask-image: url('../media/icons/sun.svg'); /* Quyosh tasviri (kunduzgi rejim) */
   mask-size: contain; /* Iconni tugma ichiga moslashtirish */
   mask-repeat: no-repeat;
@@ -411,10 +436,15 @@ button {
 /*Navbar section styles*/
 .navbar{
   background-color: var(--navbar-bg-color);
+  transition: background-color 0.4s ease;
 }
 
 .navbar-brand img{
   width:15rem;
+}
+
+#magicsite-logo{
+  transition: opacity 0.4s ease;
 }
 
 .navbar-collapse div{
@@ -433,7 +463,21 @@ button {
     }
   }
 
+.navbar-nav .nav-item .nav-link  {
+  color: var(--nav-text-color)
+}
 
+.navbar-nav .nav-item .active  {
+  color: var(--nav-text-color-active)
+}
+
+.navbar-nav .nav-item .nav-link:hover  {
+  color: var(--nav-text-color-active)
+}
+
+.navbar-over-phone-number a{
+  color: var(--text-black-white)
+}
 /*Bottom navbar styles */
 
 @media(min-width:576px){
@@ -507,8 +551,8 @@ button {
 /*Main section*/
   .main-section, .g766{
     background-color: var(--bg-color);
-    transition: background-color 0.5s ease, color 0.5s ease;
     margin:0;
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
   .main-text-box{
     padding:1rem 1.5rem 1rem 1.5rem;
@@ -530,10 +574,6 @@ button {
 
   .bic3{
     right:0;
-  }
-  
-  .btn-white .icon-open-new{
-    color:black;
   }
 
   .main-text-buttons{
@@ -603,8 +643,8 @@ button {
 
 
 .main-site-text p i{
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background: var(--main-site-text-p-i-bg);
+  box-shadow: 0 0 10px var(--main-site-text-p-i-box-shadow);
   backdrop-filter: blur(20px);
   border:1px solid #000;
   padding:0.6rem;
@@ -627,7 +667,7 @@ button {
 
   .main-section div .main-img{
     background-color: var(--bg-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.4s ease;
   }
 
   .main-section div .main-img .img-box{
@@ -639,7 +679,7 @@ button {
     margin-left:7%;
     margin-right:7%;
     transform:rotate(-10deg);
-    transition:all 0.5s ease-in-out;
+    transition:all 0.4s ease-in-out;
   }
   .main-section div .main-img .img-box img{
     width:100%;
@@ -651,10 +691,14 @@ button {
 
 /*End main section*/
 
+
+
 /*Second section*/
 
 .second-section{
-  background-color: #c5f0a4;
+  background-color: var(--bg-color);
+  margin:0;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 
@@ -677,7 +721,7 @@ button {
 }
 
 .second-section-collapse-item-inner div{
-  color:#2a2a2a;
+  color:var(--text-color);
 }
 
 
@@ -686,13 +730,14 @@ button {
   padding:1rem 0.5rem;
   margin-top:0.5rem;
   margin-bottom:0.2rem;
-  background-color: #c5f0a4;
+  background-color: var(--bg-color);
   border-radius: 8px;
   margin-bottom: 10px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
-  border:2px solid #2a2a2a;
+  border:2px solid var(--text-color);
   overflow: hidden;
   transition: all 0.4s ease-in-out;
+  color: var(--text-color);
 }
 
 .custom-accordion:hover {
@@ -701,7 +746,7 @@ button {
 }
 
 .custom-collapse .card-body {
-  background-color: #c5f0a4;
+  background-color: var(--bg-color);
   border: 2px 0px 0px 0px solid rgba(0, 0, 0, 0.1);
   border-radius: 0;
   padding: 15px;
@@ -722,25 +767,26 @@ button {
 
 /* Collapse sarlavha linki hover effekti */
 .second-section-collapse-item a {
-  color:#2a2a2a;
+  color:var(--text-color);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .second-section-collapse-item a:hover {
-  color: #000;
+  color: var(--text-black-white);
   text-decoration: underline;
 }
 
 
 /*Between animation*/
 .text-container_btw {
-  background-color: #c5f0a4;
+  background-color: var(--bg-color);
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 50px; /* Matn balandligi */
+  height: 50px;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Matnni ketma-ket joylashtirish */
@@ -749,8 +795,9 @@ button {
   white-space: nowrap;
   font-size: 24px;
   font-weight: bold;
-  color: #004d40;
+ /* color: var(--text-between-animation-1);*/
   animation: slideText 20s linear infinite;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Animatsiya uchun asosiy container */
@@ -758,20 +805,29 @@ button {
   display: flex;
 }
 
+.text-slide_btw .span_1 {
+  color: var(--text-between-animation-1);
+}
+
+.text-slide_btw .span_1 {
+  color: var(--text-black-white);
+}
+
 /* Uzluksiz harakat animatsiyasi */
 @keyframes slideText {
   0% {
-    transform: translateX(0); /* Boshlanish joyi */
+    transform: translateX(0); /* Starter */
   }
   100% {
-    transform: translateX(-100%); /* Tugash joyi */
+    transform: translateX(-100%); /* Finish */
   }
 }
 
 /*THIRD SECTION*/
 
 .third-section{
-  background-color: #c5f0a4;
+  background-color: var(--bg-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /*END THIRD SECTION*/
