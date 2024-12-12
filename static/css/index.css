@@ -15,13 +15,13 @@
       --button-text-color-dark: #c5f0a4;/* button dark color */
       --main-site-text-p-i-bg: rgba(0, 0, 0, 0.2);
       --main-site-text-p-i-box-shadow: rgba(0, 0, 0, 0.25);
-
-     
-        --particle-color-day: #000000; /* Kunduzgi rejim uchun */
-        --particle-color-night: #ffffff; /* Tungi rejim uchun */
-   
-    
+      --particle-color-day: #000000; /* Kunduzgi rejim uchun */
+      --particle-color-night: #ffffff; /* Tungi rejim uchun */
+      --primary-text: #111111;
+      --card-bg: #a9e978;
+      --icon-color: #333333;
     }
+  
 
     /* Dark mode theme */
     [data-theme="dark"] {
@@ -37,405 +37,13 @@
       --button-text-color: #C5F0A4; 
       --button-bg-color-dark: #2a2a2a;
       --button-text-color-dark: #c5f0a4;
-
       --main-site-text-p-i-bg: rgba(0, 0, 0, 0.2);
       --main-site-text-p-i-box-shadow: rgba(0, 0, 0, 0.25);
+      --primary-text: #c5f0a4;
+      --card-bg: #2a2a2a;
+      --icon-color: #a9e978;
     }
 
-.text-color-white{
-  color: var(--text-black-white)!important;
-}
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family:  "Roboto", sans-serif;
-  transition: background-color 0.3s ease-in, color 0.3 ease-in;
-}
-
-html{
-  background-color: var(--bg-color);
-  font-size: 16px; /* 1rem=16px */
-  transition: background-color 0.3s ease-in, color 0.3 ease-in;
-}
-
-  ::selection {
-    background: #a9e978; 
-    color: #2a2a2a;      
-  }
-
-  /* for Firefox */
-  ::-moz-selection {
-    background: #a9e978;
-    color: #2a2a2a;      
-  }
-
-  .unselectable {
-    user-select: none; /*unselectable*/
-    -webkit-user-select: none; /*for Safari*/
-    -moz-user-select: none; /*for Firefox  */
-    -ms-user-select: none; /*for old IE  */
-  }
-
-
-
-/*ANIMATIONS*/
-  /*typing animation*/
-  .typing {
-    width: 20ch;
-    animation: typing 4s steps(20), blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid;
-  }
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 20ch;
-    }
-  }
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-
-/*Canvas animation*/
-#animation-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 4; 
-  pointer-events: none; 
-}
-
-/*LOADER ANIMATION*/
-/* Loader container */
-.loader-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-color); /* Background color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Animatsiya */
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Loaderning aylanish animatsiyasi */
-
-
-/* Loading text */
-.loader-container p {
-  margin-top: 20px;
-  font-size: 18px;
-  color: var(--text-color);
-  font-weight: bold;
-}
-
-
-/* Loaderni yo'qolishi uchun holat */
-.loader-container.hidden {
-  opacity: 0;
-  transform: scale(0.6); 
-  pointer-events: none; 
-}
-
-/* Kontentning boshlang'ich holati */
-#content {
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-black-white);
-  padding: 50px;
-}
-
-
-.loader {
-  position: absolute;
-  top: calc(50% - 32px);
-  left: calc(50% - 32px);
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  perspective: 800px;
-}
-
-.inner {
-  position: absolute;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;  
-}
-
-.inner.one {
-  left: 0%;
-  top: 0%;
-  animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid var(--text-black-white);
-}
-
-.inner.two {
-  right: 0%;
-  top: 0%;
-  animation: rotate-two 1s linear infinite;
-  border-right: 3px solid var(--text-color);
-}
-
-.inner.three {
-  right: 0%;
-  bottom: 0%;
-  animation: rotate-three 1s linear infinite;
-  border-top: 3px solid var(--text-black-white);
-}
-
-@keyframes rotate-one {
-  0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-  }
-}
-
-@keyframes rotate-two {
-  0% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-  }
-}
-
-@keyframes rotate-three {
-  0% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-  }
-}
-
-
-
-
-
-
-/*font css */
-.roboto{
-  font-family: "Roboto", sans-serif;
-}
-
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-
-  .playfair{
-    font-family: "Playfair", serif;
-    font-optical-sizing: auto;
-    }
- /*End font css*/
- 
-
-/*txt styles*/
-.txt-color{
-  color: var(--text-color);
-}
-.txt-black{
-  color:#000;
-}
-.txt-dark{
-  color:#111111;
-}
-.txt-green-grey{
-  color:#e1f7d0;
-}
-.txt-green-grey div code a, .txt-green-grey a i{
-  color:#e1f7d0;
-}
-
-
-.scrolleffect {
-  opacity: 0;
-  transform: scale(0.9) translateY(2rem);
-  transition: all 1.5s ease-out;
-}
-
-.scrolleffect.show {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-/*end txt styles*/
-
-
-/*plus styles*/
-.display-none{
-  display: none!important;
-}
-
-button {
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-dark{
-  display: inline-block;
-  font-size:1rem;
-  text-decoration: none;
-  padding: 0.6rem 2rem;
-  border-radius:8px 0 8px 0;
-  border:2px solid transparent;
-  cursor:pointer;
-  background-color: var(--button-bg-color-dark);
-  color: var(--button-text-color-dark);
-  transition:all 0.3s ease-in-out;
-}
-
-.btn-dark:hover{
-  background-color: var(--button-bg-color);
-  color: var(--button-text-color);
-  border:2px solid var(--button-text-color);
-}
-
-.btn-white{
-  display: inline-block;
-  font-size:1rem;
-  color:var(--button-text-color);
-  background-color: var(--button-bg-color);
-  text-decoration: none;
-  padding: 0.6rem 2rem;
-  border-radius:0 8px 0 8px;
-  border:2px solid #2a2a2a;
-  cursor:pointer;
-  transition:all 0.3s ease-in-out;
-}
-
-.btn-white:hover{
-  background-color: var(--button-bg-color-dark);
-  color: var(--button-text-color-dark);
-  border:2.2px solid var(--button-text-color-dark);
-}
-
-.toggle-theme-button-light-night{
-  width: 60px; /* Tugma kattaligi */
-  height: 60px;
-  background-color: var(--button-bg-color); /* Tugma fon rangi */
-  border: none; /* Borderni olib tashlash */
-  border-radius: 50%; /* Dumaloq shakl */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tugmaga soyani qo‘shish */
-  transition: background-color 0.5s ease, transform 0.3s ease;
-  position:absolute;
-  right:1rem;
-}
-
-.toggle-theme-button-light-night:hover{
-  transform: scale(1.1);
-}
-
-
-.toggle-theme-button-light-night-icon {
-  width: 30px; /* Icon kattaligi */
-  height: 30px;
-  background-color: var(--text-black-white) /* Icon rangi */;
-  mask-image: url('../media/icons/sun.svg'); /* Quyosh tasviri (kunduzgi rejim) */
-  mask-size: contain; /* Iconni tugma ichiga moslashtirish */
-  mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-image: url('../media/icons/sun.svg');
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  transition: background-color 0.5s ease, transform 0.3s ease;
-}
-
-[data-theme="dark"] .toggle-theme-button-light-night-icon {
-  mask-image: url('../media/icons/moon.svg'); /* Oy tasviri (tungi rejim) */
-    -webkit-mask-image: url('../media/icons/moon.svg');
-}
 
 
 /*Navbar section styles*/
@@ -849,6 +457,58 @@ button {
   background-color: var(--bg-color);
   color: var(--text-black-a9e978);
 }
+
+.services-section {
+  padding: 50px 20px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  /*fill: var(--icon-color);*/
+  color: var(--icon-color);
+  margin: 0 auto;
+  transition: fill 0.3s;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: var(--primary-text);
+}
+
+.service-description {
+  font-size: 1rem;
+  color: var(--primary-text);
+}
+
+@media (max-width: 768px) {
+  .service-card {
+      padding: 20px;
+  }
+}
+
 /*END THIRD SECTION*/
 
 
@@ -860,16 +520,6 @@ button {
 }
 
 
-
-[data-theme="dark"] {
-  background-color: #121212;
-  color: white;
-}
-
-[data-theme="light"] {
-  background-color: white;
-  color: black;
-}
 
 
 

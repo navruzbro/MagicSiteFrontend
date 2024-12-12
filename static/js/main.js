@@ -1,20 +1,25 @@
 // 1. Scroll effekti uchun kod
-const elements = document.querySelectorAll('.scrolleffect');
+// Scroll effekti uchun kod
+const classList = ['.scrolleffect', '.scrolleffect-2', '.scrolleffect-3']; // Yangi classlar qo'shing
+const elements = classList.map((className) => document.querySelectorAll(className));
 
 function handleScroll() {
-  elements.forEach((element) => {
-    const elementPosition = element.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+  elements.forEach((nodeList) => {
+    nodeList.forEach((element) => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
-    if (elementPosition < windowHeight - 100) {
-      element.classList.add('show');
-    }
+      if (elementPosition < windowHeight - 100) {
+        element.classList.add('show');
+      }
+    });
   });
 }
 
 window.addEventListener('scroll', handleScroll);
 handleScroll();
 
+  
 // 2. Loader animatsiyasi
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
