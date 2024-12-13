@@ -1,6 +1,6 @@
 // 1. Scroll effekti uchun kod
 // Scroll effekti uchun kod
-const classList = ['.scrolleffect', '.scrolleffect-2', '.scrolleffect-3']; // Yangi classlar qo'shing
+const classList = ['.scrolleffect', '.scrolleffect-2', '.scrolleffect-3', '.scrolleffect-4', '.scrolleffect-5', '.scrolleffect-6', '.scrolleffect-7 ', '.scrolleffect-8', '.scrolleffect-9' ]; // Yangi classlar qo'shing
 const elements = classList.map((className) => document.querySelectorAll(className));
 
 function handleScroll() {

@@ -208,6 +208,77 @@ button {
     transform: scale(1) translateX(0);
   }
 
+  .scrolleffect-4 {
+    opacity:0.3;
+    transform:scale(0.2);
+    transition: all 1.2s ease-in-out;
+  }
+
+  .scrolleffect-4.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .scrolleffect-5 {
+    opacity:0.3;
+    transform:scale(0.2);
+    transition: all 1.2s ease-in-out;
+    transition-delay:0.2s;
+  }
+
+  .scrolleffect-5.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .scrolleffect-6 {
+    opacity:0.3;
+    transform:scale(0.2);
+    transition: all 1.2s ease-in-out;
+    transition-delay:0.4s;
+  }
+
+  .scrolleffect-6.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .scrolleffect-7 {
+    opacity:0.3;
+    transform:scale(0.2);
+    transition: all 1.2s ease-in-out;
+    transition-delay:0.6s;
+  }
+
+  .scrolleffect-7.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .scrolleffect-8 {
+    opacity:0.3;
+    transform:scale(0.2);
+    transition: all 1.2s ease-in-out;
+    transition-delay:0.8s;
+  }
+
+  .scrolleffect-8.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .scrolleffect-9 {
+    opacity:0.3;
+    transform:scale(0.2);
+    transition: all 1.2s ease-in-out;
+    transition-delay:1s;
+  }
+
+  .scrolleffect-9.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+
 
   
 
