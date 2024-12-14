@@ -9,7 +9,7 @@ function handleScroll() {
       const elementPosition = element.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      if (elementPosition < windowHeight - 100) {
+      if (elementPosition < windowHeight - 10) {
         element.classList.add('show');
       }
     });

@@ -20,6 +20,7 @@
       --primary-text: #111111;
       --card-bg: #a9e978;
       --icon-color: #333333;
+      --navbar-down: #3c3c3c;
     }
   
 
@@ -42,6 +43,7 @@
       --primary-text: #c5f0a4;
       --card-bg: #2a2a2a;
       --icon-color: #a9e978;
+      --navbar-down:#a9e978;
     }
 
 
@@ -128,7 +130,7 @@
     padding-right:0.7rem;
 }
 .bottom-nav-item{
-  color:#52B036;
+  color:var(--navbar-down);
   text-decoration: none;
   padding-top:0.4rem;
   display:flex;
@@ -138,7 +140,7 @@
 .bottom-nav-item p, .bottom-nav-item i, .bottom-nav-item code{
   display:inline;
   padding:0;
-  color:#52B036;
+  color:var(--navbar-down);
   text-decoration: none;
 
 }
@@ -413,7 +415,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 50px;
+  height: 4rem;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -421,9 +423,8 @@
 .text-slide_btw {
   display: inline-block;
   white-space: nowrap;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
- /* color: var(--text-between-animation-1);*/
   animation: slideText 20s linear infinite;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
@@ -555,7 +556,9 @@
   width:100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: center;
+  height: 100%;
 }
 
 .contact-info:hover {

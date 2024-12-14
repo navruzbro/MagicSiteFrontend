@@ -64,13 +64,11 @@ body {
     background: #a9e978; 
     color: #2a2a2a;      
   }
-
   /* for Firefox */
   ::-moz-selection {
     background: #a9e978;
     color: #2a2a2a;      
   }
-
   .unselectable {
     user-select: none; /*unselectable*/
     -webkit-user-select: none; /*for Safari*/
@@ -92,12 +90,34 @@ button {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
-  
+  .btn-blur{
+    background-color:rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    backdrop-filter: 10px;
+    font-size:1rem;
+    text-decoration: none;
+    padding: 0.6rem 2rem;
+    margin:0.3rem;
+    border-radius:8px 0 8px 0;
+    border:2px solid transparent;
+    cursor:pointer;
+    color: var(--button-text-color);
+    transition:all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+
+  .btn-blur:hover{
+    background-color: rgba(73, 67, 67, 0.3);
+    color: var(--button-text-color);
+    border:2px solid var(--button-text-color);
+  }
+
   .btn-dark{
     display: inline-block;
     font-size:1rem;
     text-decoration: none;
     padding: 0.6rem 2rem;
+    margin:0.3rem;
     border-radius:8px 0 8px 0;
     border:2px solid transparent;
     cursor:pointer;
@@ -107,7 +127,7 @@ button {
   }
   
   .btn-dark:hover{
-    background-color: var(--button-bg-color);
+    background-color: rgba(0, 0, 0, 0.3);
     color: var(--button-text-color);
     border:2px solid var(--button-text-color);
   }
@@ -118,6 +138,7 @@ button {
     color:var(--button-text-color);
     background-color: var(--button-bg-color);
     text-decoration: none;
+    margin:0.3rem;
     padding: 0.6rem 2rem;
     border-radius:0 8px 0 8px;
     border:2px solid #2a2a2a;
