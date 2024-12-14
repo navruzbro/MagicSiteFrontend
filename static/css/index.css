@@ -45,11 +45,25 @@
     }
 
 
+/*Navbar and Header*/
+.navbar-header-section{
+  background-image:url(../media/sitephotos/header-background-light.jpg);
+  transition: background-image 0.4s ease, color 0.1s ease-in-out;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .navbar-header-section{
+  background-image:url(../media/sitephotos/header-background-night.jpg);
+}
 
 /*Navbar section styles*/
 .navbar{
-  background-color: var(--navbar-bg-color);
-  transition: background-color 0.4s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
   z-index:10;
 }
 
@@ -164,9 +178,8 @@
 
 /*Main section*/
   .main-section, .g766{
-    background-color: var(--bg-color);
     margin:0;
-    transition: background-color 0.4s ease, color 0.4s ease;
+   
   }
   .main-text-box{
     padding:1rem 1.5rem 1rem 1.5rem;
@@ -279,28 +292,25 @@
   border-radius:0 0 10px 0;
 }
 
-  .main-section div .main-img{
-    background-color: var(--bg-color);
-    transition: background-color 0.4s ease;
-  }
 
   .main-section div .main-img .img-box{
-    border-radius:20% 40% 20% 40%;
+    border-radius:40% 30% 40% 30%;
     overflow: hidden;
     width:80%;
     margin-top:5%;
     margin-bottom:5%;
     margin-left:7%;
     margin-right:7%;
-    transform:rotate(-10deg);
+    transform:rotate(0deg);
     transition:all 0.4s ease-in-out;
   }
   .main-section div .main-img .img-box img{
     width:100%;
+    transition:all 0.2s ease-in-out;
   }
 
   .main-section div .main-img .img-box:hover{
-    transform:rotate(0deg) scale(1.05);
+    transform:rotate(10deg) scale(1.08);
   }
 
 /*End main section*/

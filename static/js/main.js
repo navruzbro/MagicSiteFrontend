@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 const logo = document.getElementById("magicsite-logo");
+const headerImg = document.getElementById("header-img"); // Header rasm elementini tanlash
 
 const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const savedTheme = localStorage.getItem("theme");
@@ -48,10 +49,12 @@ document.documentElement.setAttribute("data-theme", currentTheme);
 const updateTheme = () => {
   if (currentTheme === "dark") {
     themeIcon.style.transform = "rotate(0deg)";
-    logo.src = "./static/media/logo/magicsitelight.PNG";
+    logo.src = "./static/media/logo/magicsitelight.PNG"; // Dark rejim uchun logo
+    headerImg.src = "./static/media/sitephotos/header-section-img.webp"; // Dark rejim uchun header rasm
   } else {
     themeIcon.style.transform = "rotate(180deg)";
-    logo.src = "./static/media/logo/magicsitetext.PNG";
+    logo.src = "./static/media/logo/magicsitetext.PNG"; // Light rejim uchun logo
+    headerImg.src = "./static/media/sitephotos/header-section-img-light.webp"; // Light rejim uchun header rasm
   }
 };
 
@@ -63,7 +66,6 @@ themeToggle.addEventListener("click", () => {
   localStorage.setItem("theme", currentTheme);
   updateTheme();
 });
-
 
 
 

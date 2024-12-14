@@ -132,9 +132,11 @@ button {
   }
   
   .toggle-theme-button-light-night{
-    width: 60px; /* Tugma kattaligi */
-    height: 60px;
-    background-color: var(--button-bg-color); /* Tugma fon rangi */
+    width: 3.4rem; /* Tugma kattaligi */
+    height: 3.4rem;
+    margin:0.3rem;
+    background-color: rgba(0, 0, 0, 0.3); /* Tugma fon rangi */
+    backdrop-filter: 20px;
     border: none; /* Borderni olib tashlash */
     border-radius: 50%; /* Dumaloq shakl */
     display: flex;
