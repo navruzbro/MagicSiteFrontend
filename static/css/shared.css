@@ -48,6 +48,7 @@ html{
     background-color: var(--bg-color);
     font-size: 16px; /* 1rem=16px */
     transition: background-color 0.3s ease-in, color 0.3 ease-in;
+   
 }
 
 section, head{
@@ -60,9 +61,11 @@ body {
     font-family:  "Roboto", sans-serif;
     transition: background-color 0.3s ease-in, color 0.3 ease-in;
     width:100%;
-    touch-action:manipulation;/*prohibits zooming for mobile devices*/
+    
 }
-      
+img, div{
+  touch-action:manipulation;
+}    
 @media(max-width:576px){
   html{
     width:100vw;

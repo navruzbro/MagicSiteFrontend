@@ -139,10 +139,7 @@ function animate() {
 // Animatsiyani boshlash
 animate();
 
-//prohibits zooming 
-document.addEventListener('gesturestart', function (e) {
-  e.preventDefault();
-});
+
 //prohibits zooming for laptop, computers
 // Ctrl va Cmd tugmalari bilan zoom qilishni cheklash
 document.addEventListener('keydown', function (e) {
@@ -159,6 +156,11 @@ document.addEventListener('wheel', function (e) {
 }, { passive: false });
 
 // Gesture zoomni mobil qurilmalar uchun cheklash (qo'shimcha)
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+
+//prohibits zooming 
 document.addEventListener('gesturestart', function (e) {
   e.preventDefault();
 });
