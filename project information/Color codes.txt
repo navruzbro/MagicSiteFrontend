@@ -7,7 +7,7 @@
   pointer-events: none /*Bosib bo'lmaydigan qiladi*/
 
 Keyinroq asosiy sahifani main qismini
- orqa fonini o'zgartirish va qo'shimcha 
+ orqa fonini o'zgartirish va qo'shimcha bajarildi
  animatsiyalar qo'shish sekin sekin qo'shimchalar
   qo'shib borish va o'zgaritirib mukammallashtirib borish
 
@@ -16,7 +16,5 @@ Qilinishi kerak bo'lgan ishlar:
     Kodlarni taxlash -
     Qo'shimcha sahifalar uchun kod yozib chiqish
     Qo'shimcha animatsiyalar 
-    tungi va kunduzgi rejimlarni qo'shish 9 
-    loader classlarini murakkabroq qi
 
 Scrolleffectga ikkinchi srolleffectlarini qo'shish... sayt ko'rinishini chiroylilash

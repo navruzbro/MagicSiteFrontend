@@ -51,7 +51,7 @@
 .navbar-header-section{
   background-image:url(../media/sitephotos/header-background-light.jpg);
   transition: background-image 0.4s ease, color 0.1s ease-in-out;
-  width:100%;
+  width:100%!important;
   background-repeat: no-repeat;
   background-size:cover;
 }
@@ -79,6 +79,12 @@
 
 .navbar-collapse div{
   cursor: pointer;
+}
+
+.navbar-toggler{
+  border:0px solid;
+  color: var(--text-black-white);
+  box-shadow: var(--main-site-text-p-i-box-shadow);
 }
   /*navbar responsive*/
   @media(max-width:768px){
@@ -145,7 +151,7 @@
 
 }
 }
-@media(max-width:379px){
+@media(max-width:390px){
   .bottom-navbar{
       width:90%;
       margin-left:5%;
@@ -156,7 +162,7 @@
       padding-right:0.4rem;
   }
 }
-@media(max-width:325px){
+@media(max-width:333px){
   .bottom-navbar{
       width:95%;
       margin-left:2.5%;
@@ -166,7 +172,7 @@
   }
 }
 
-@media(max-width:299px){
+@media(max-width:307px){
   .bottom-nav-item p i{
       font-size:0.8rem;
   }
@@ -179,12 +185,17 @@
 
 
 /*Main section*/
-  .main-section, .g766{
+  .header, header{
     margin:0;
-   
   }
+ 
   .main-text-box{
     padding:1rem 1.5rem 1rem 1.5rem;
+    justify-content:center;
+    align-items:center;
+  }
+  .main-img-box{
+    display:flex;
     justify-content:center;
     align-items:center;
   }
@@ -242,22 +253,27 @@
           transform: translate(0, 0) rotate(30deg); /* Boshlanishga qaytish */
       }
   }
+  .main-text-box{
+    padding-top:2rem;
+    padding-bottom:2rem;
+  }
+
   @media(min-width:576px){
     .main-text-box{
-     padding:3rem 3rem 2rem 3rem;
+     padding:3rem 3rem 3rem 3rem;
     }
   }
 
 
  @media(min-width:968px){
    .main-text-box{
-    padding:5rem 6rem 4rem 6rem;
+    padding:6rem;
    }
  }
 
  @media(min-width:1200px){
   .main-text-box{
-   padding:9rem 6rem 4rem 6rem;
+   padding:9rem 6rem 9rem 6rem;
   }
 }
 
@@ -327,7 +343,11 @@
   transition: background-color 0.4s ease, color 0.4s ease;
   z-index:2;
 }
-
+.second-section-img{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
 .second-section-img-box{
   border-radius:20% 40% 20% 40%;
@@ -336,7 +356,7 @@
   margin-top:5%;
   margin-left:7%;
   margin-right:7%;
-  transform:rotate(5deg);
+  transform:rotate(0deg);
   transition:all 0.5s ease-in-out;
 }
 .second-section-img-box img{
@@ -344,7 +364,7 @@
 }
 
 .second-section-img-box:hover{
-  transform:rotate(-0.5deg) scale(1.06);
+  transform:rotate(7deg) scale(1.1);
 }
 
 .second-section-collapse-item-inner div{
@@ -393,21 +413,50 @@
 }
 
 /* Collapse sarlavha linki hover effekti */
+.second-section-collapse-item{
+  width:100%;
+  height:100%;
+}
 .second-section-collapse-item a {
   color:var(--text-color);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
-  display:inline-block;
+  display:flex;
   width:100%;
   height:100%;
+  transition: all 0.3s;
+  display: inline-block;
+  justify-self: end;
+  align-self: self-end;
 }
 
-.second-section-collapse-item a:hover {
+
+
+.accordion-item .second-section-collapse-item i{
+  font-size:1.5rem;
+  margin-right:0.6rem;
+  transition: all 0.3s;
+  display: inline-block;
+  justify-self: end;
+  align-self: self-end;
+  color:var(--text-color);
+}
+
+.accordion-item:hover .second-section-collapse-item a{
   color: var(--text-black-white);
   text-decoration: underline;
 }
+.accordion-item:hover .second-section-collapse-item i{
+  transform:rotate(-359deg);color: 
+  var(--text-black-white);
+}
 
+@media(max-width:768px){
+  .accordion-item .second-section-collapse-item i{
+    font-size:1.2rem;
+}
+}
 
 /*Between animation*/
 .text-container_btw {
@@ -498,24 +547,33 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.service-icon {
-  width: 50px;
-  height: 50px;
-  /*fill: var(--icon-color);*/
+.service-card i {
+  font-size:2.5rem;
   color: var(--icon-color);
   margin: 0 auto;
-  transition: fill 0.3s;
+  transition:all 0.3s;
+}
+.service-card:hover i{
+  transform:rotate(359deg);
+  color:var(--text-black-a9e978);
+
 }
 
 .service-title {
   font-size: 1.5rem;
   margin-top: 15px;
-  color: var(--primary-text);
+  color: var(--text-color);
+  transition:all 0.3s;
 }
 
 .service-description {
   font-size: 1rem;
-  color: var(--primary-text);
+  color: var(--text-color);
+  transition:all 0.3s;
+}
+
+.service-card:hover .service-title, .service-card:hover .service-description{
+  color:var(--text-black-a9e978);
 }
 
 @media (max-width: 576px) {
@@ -530,6 +588,8 @@
 #contact-section{
   background-color: var(--bg-color);
   transition: background-color 0.4s ease, color 0.4s ease;
+  margin-bottom:0;
+  padding-bottom:0;
 }
 .contact-section-head{
   height:2px;
@@ -601,14 +661,15 @@
   background-size:100% auto;
   background-attachment: fixed;
   padding-top:3rem;
-  padding-bottom:3rem;
+  padding-bottom:0rem;
+  margin-bottom:0;
 }
 
 
 @media(max-width:768px){
   .contact-from{
     padding-top:0.5rem;
-    padding-bottom:0.5rem;
+    padding-bottom:0rem;
     background-size:140% 100%;
   }
 }
@@ -647,7 +708,6 @@ form textarea {
 /*footer section*/
 .footer-section{
   background-color: #000;
-  z-index:2;
 }
 
 

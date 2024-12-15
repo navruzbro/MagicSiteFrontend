@@ -139,3 +139,26 @@ function animate() {
 // Animatsiyani boshlash
 animate();
 
+//prohibits zooming 
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+//prohibits zooming for laptop, computers
+// Ctrl va Cmd tugmalari bilan zoom qilishni cheklash
+document.addEventListener('keydown', function (e) {
+  if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+      e.preventDefault();
+  }
+});
+
+// Ctrl + sichqoncha g'ildiragini aylantirishni cheklash
+document.addEventListener('wheel', function (e) {
+  if (e.ctrlKey) {
+      e.preventDefault();
+  }
+}, { passive: false });
+
+// Gesture zoomni mobil qurilmalar uchun cheklash (qo'shimcha)
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});

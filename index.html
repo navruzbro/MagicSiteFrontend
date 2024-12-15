@@ -41,11 +41,11 @@
           Arzon veb sayt yaratish xizmati - Magic Site
         </h1>
         <p class="display-none">
-        Web dasturchi va tajribali telegram kanallar admini Navruz Norpulatovning shaxsiy blogi -- About me, Portfolio, Resume, Blog, Service and Feedback pages
+          Web dasturchi va tajribali telegram kanallar admini Navruz Norpulatovning shaxsiy blogi -- About me, Portfolio, Resume, Blog, Service and Feedback pages
         </p>
 
 <!--bottom navbar for smaller than 576px-->
-<div id="small-navbar" class="small-navbar fixed-bottom roboto">
+<div id="small-navbar" class="small-navbar fixed-bottom roboto unselectable">
   <div class="bottom-navbar">
       <div class="row">
           <!--
@@ -111,16 +111,19 @@
 <!--End Loader animation-->
 
 <!--Canvas animation-->
-<canvas id="animation-canvas"></canvas>
+<div class="container-xl">
+  <canvas id="animation-canvas"></canvas>
+</div>
+
 
 <!--NAVBAR and HEADER SECTION-->
-  <div class="navbar-header-section">
+<div class="navbar-header-section">
     <!--Navbar section-->
           <nav class="navbar navbar-expand-lg" id="navbar">
-              <div class="container-fluid">
+              <div class="container-xl">
                 <a class="navbar-brand" href="#" target="_blank"><img id="magicsite-logo" src="./static/media/logo/magicsitetext.PNG" alt="MagicSiteUz"> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+                  <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -149,74 +152,68 @@
                 </div>
               </div>
           </nav>
-  <!--end Navbar section-->
-
-  <!--Header section-->
-          <header class="header" id="header">
-            <div class="container-fluid g766">
-              <div class="main-section">
-                <div class="row scrolleffect">
-                    <button id="theme-toggle" class="toggle-theme-button-light-night" aria-label="Toggle Theme">
-                      <span class="toggle-theme-button-light-night-icon" id="theme-icon"></span>
-                    </button>
-                  <div class="col-md-7 col-12 main-text-box">
-                  
-                    <div class="main-text">
-                      <p class="main-txt-p1">
-                        <div class="bee-icon unselectable">
-                            <img src="./static/media/sitephotos/bee-icon.webp" alt="bee">
-                        </div>
-                        <span class=" fs-3 roboto-bold-italic playfair main-txt-frst">
-                          Veb sayt yaratish - <span class="text-color-white"> MAGICSITE</span>
-                        </span>
-                      </p>
-                      <h2 class="fs-0 roboto-black  playfair text-color-white">Sifatli Arzon va Tezkor veb-sayt yaratish xizmati</h2>
-                    </div>
-                    <div class="main-text-plus unselectable">
-                      <div class="main-site-text">
-                          <p >
-                              <i class="fa-solid fa-code"></i>
-                              <br>
-                              <i class="fa-brands fa-python"></i>
-                          </p>
-                          <p id="d432">
-                              <i class="fa-solid fa-laptop"></i>
-                              <br>
-                              <i class="fa-solid fa-arrow-trend-up"></i>
-                          </p>
-                          
-                          <p class="fs-6">
-                              Web sayt sizga bo'lgan ishonchni <span class="text-color-white">87%</span> ga oshiradi. Web sayt yaratish borasida bizga murojat qiling!<span class="txt-green-none" > Tezkor, ishonchli va hamyonbop.</span>
-                          </p>
-                      </div>
-                      <div class="main-text-buttons">
-                        
-                      </div>
-                    </div>
-                    <div class="main-text-buttons unselectable">
-                      <a href="#" class="button-dark btn-dark roboto-medium">
-                        Xizmatlar
-                      </a>
-                      <a href="#" class="button-white btn-blur roboto-medium">
-                        Bog'lanish <i class="fa-solid fa-up-right-from-square"></i>
-                      </a>
-                    </div>
+    <!--end Navbar section-->
+    <!--Header section-->
+    <header class="header g766" id="header">
+      <div class="container-xl">
+        <div class="main-section">
+          <div class="row scrolleffect">
+              <button id="theme-toggle" class="toggle-theme-button-light-night" aria-label="Toggle Theme">
+                <span class="toggle-theme-button-light-night-icon" id="theme-icon"></span>
+              </button>
+            <div class="col-md-7 col-12 main-text-box">
+              <div class="main-text">
+                <p class="main-txt-p1">
+                  <div class="bee-icon unselectable">
+                      <img src="./static/media/sitephotos/bee-icon.webp" alt="bee">
                   </div>
-                  <div class="col-md-5 col-12">
+                  <span class=" fs-3 roboto-bold-italic playfair main-txt-frst">
+                    Veb sayt yaratish - <span class="text-color-white"> MAGICSITE</span>
+                  </span>
+                </p>
+                <h2 class="fs-0 roboto-black  playfair text-color-white">Sifatli Arzon va Tezkor veb-sayt yaratish xizmati</h2>
+              </div>
+              <div class="main-text-plus unselectable">
+                <div class="main-site-text">
+                    <p >
+                        <i class="fa-solid fa-code"></i>
+                        <br>
+                        <i class="fa-brands fa-python"></i>
+                    </p>
+                    <p id="d432">
+                        <i class="fa-solid fa-laptop"></i>
+                        <br>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </p>
                     
-                    <div class="main-img">
-                      <div class="img-box">
-                        <img id="header-img" src="./static/media/sitephotos/header-section-img-light.webp" alt="Magicsiteslidephoto">
-                      </div>
-                      </div>
-                  </div>
+                    <p class="fs-6">
+                        Web sayt sizga bo'lgan ishonchni <span class="text-color-white">87%</span> ga oshiradi. Web sayt yaratish borasida bizga murojat qiling!<span class="txt-green-none" > Tezkor, ishonchli va hamyonbop.</span>
+                    </p>
                 </div>
               </div>
+              <div class="main-text-buttons unselectable">
+                <a href="#third-section" class="button-dark btn-dark roboto-medium">
+                  Xizmatlar
+                </a>
+                <a href="#" class="button-white btn-blur roboto-medium">
+                  Bog'lanish <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
-          </header>
-  <!--End Header section-->
-  </div>
-<!--END NAVBAR AND HEADER SECTION-->  
+            <div class="col-md-5 col-12 main-img-box">
+              <div class="main-img">
+                <div class="img-box">
+                  <img id="header-img" src="./static/media/sitephotos/header-section-img-light.webp" alt="Magicsiteslidephoto">
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<!--End Header section-->
+</div>
+<!--END NAVBAR AND HEADER SECTION-->
   
 
 <!--between animation-->
@@ -240,7 +237,7 @@
 
 <!--Second section-->
         <section class="second-section py-5" id="second-section">
-          <div class="container-fluid">
+          <div class="container-xl">
             <div class="row">
               <div class="col-md-5 col-12 order-2 order-md-1 second-section-img">
                 <div class="second-section-img-inner scrolleffect-3">
@@ -257,10 +254,11 @@
                   <div class="accordion" id="faqAccordion">
                     <!-- Collapse 1 -->
                     <div class="accordion-item custom-accordion my-3 scrolleffect-2">
-                      <p class="second-section-collapse-item d-inline-flex gap-1">
+                      <p class="second-section-collapse-item d-flex gap-1">
                         <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-1" role="button" aria-expanded="false" aria-controls="Second-section-collapse-1">
                           Nega narxlar arzon?
                         </a>
+                        <i class="fa-solid fa-angles-down"></i>
                       </p>
                       <div class="collapse custom-collapse" id="Second-section-collapse-1" data-bs-parent="#faqAccordion">
                         <div class="card card-body">
@@ -270,11 +268,12 @@
                     </div>
                 
                     <!-- Collapse 2 -->
-                    <div class="accordion-item custom-accordion my-3 scrolleffect-2">
+                    <div class="accordion-item  custom-accordion my-3 scrolleffect-2">
                       <p class="second-section-collapse-item d-inline-flex gap-1">
                         <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-2" role="button" aria-expanded="false" aria-controls="Second-section-collapse-2">
                           Xizmat ko'rsatish sifati qanday?
                         </a>
+                        <i class="fa-solid fa-angles-down"></i>
                       </p>
                       <div class="collapse custom-collapse" id="Second-section-collapse-2" data-bs-parent="#faqAccordion">
                         <div class="card card-body">
@@ -289,6 +288,7 @@
                         <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-3" role="button" aria-expanded="false" aria-controls="Second-section-collapse-3">
                           Loyihalar qancha vaqtda tayyor bo'ladi?
                         </a>
+                        <i class="fa-solid fa-angles-down"></i>
                       </p>
                       <div class="collapse custom-collapse" id="Second-section-collapse-3" data-bs-parent="#faqAccordion">
                         <div class="card card-body">
@@ -298,11 +298,12 @@
                     </div>
                 
                     <!-- Collapse 4 -->
-                    <div class="accordion-item custom-accordion my-3 scrolleffect-2">
+                    <div class="accordion-item  custom-accordion my-3 scrolleffect-2">
                       <p class="second-section-collapse-item d-inline-flex gap-1">
                         <a class="text-decoration-none fs-5 roboto-medium" data-bs-toggle="collapse" href="#Second-section-collapse-4" role="button" aria-expanded="false" aria-controls="Second-section-collapse-4">
                           Qo'shimcha xizmatlar bormi?
                         </a>
+                        <i class="fa-solid fa-angles-down"></i>
                       </p>
                       <div class="collapse custom-collapse" id="Second-section-collapse-4" data-bs-parent="#faqAccordion">
                         <div class="card card-body">
@@ -338,8 +339,8 @@
 <!--End beetween animation-->
 
 <!--Third section-->
-        <section class="third-section my-3 my-md-5" id="third-section">
-          <div class="container-fluid">
+        <section class="third-section my-3 my-md-5 " id="third-section">
+          <div class="container-xl">
             <div class="third-section-head my-4 my-md-5 d-flex align-items-center justify-content-center">
               <h3 class="fs-3  text-center roboto-medium playfair">
                 Xizmatlarimiz
@@ -360,7 +361,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-12  scrolleffect-5">
                 <div class="card service-card text-center p-4">
-                    
+                    <i class="fa-solid fa-server"></i>
                     <h3 class="service-title">Admin panel</h3>
                     <p class="service-description">Qulay boshqaruv uchun admin panelni o‘zingizga moslab taqdim etamiz.</p>
                 </div>
@@ -400,87 +401,89 @@
 <!--End third section-->
 
 <!--Fourth section. Contact-US-->
-<section class="contact-section mt-3 mt-md-5" id="contact-section">
-   <div class="container-fluid">
-     <div class="contact-section-head  my-2 my-md-4 d-flex align-items-center justify-content-center">
-      <h3 class="fs-3  text-center roboto-medium playfair">
-        Biz bilan Aloqa
-      </h3>
-     </div>
-     <div class="contact-section-h1 my-4 my-md-5 align-items-center justify-content-center">
-      <h1 class="fs-1 text-center roboto-bold playfair">
-        Sizga bilan ishlashga<span class="text-color-white">&nbsp;hamisha tayyormiz!</span> 
-      </h1>
-    </div>  
-   
-    <div class="row g-4 d-flex align-items-stretch my-3">
-      <!-- Contact Info -->
-      <div class="col-md-3 col-6">
-          <div class="contact-info">
-            <a href="tel://+998886343707" target="_blank">
-               <i class="fas fa-phone"></i>
-              <h5>Telefon raqam</h5>
-              <p>+998 (88) 634 37 07</p>
-            </a>
-          </div>
+<section class="contact-section mt-4" id="contact-section">
+   <div class="container-xl">
+      <div class="contact-section-head  my-2 my-md-5 d-flex align-items-center justify-content-center">
+        <h3 class="fs-3  text-center roboto-medium playfair">
+          Biz bilan Aloqa
+        </h3>
       </div>
-      <div class="col-md-3 col-6">
-          <div class="contact-info">
-            <a  href="http://navruzbro.t.me" target="_blank">
-              <i class="fab fa-telegram"></i>
-              <h5>Telegram</h5>
-              <p>+998 (88) 634 37 07</p>
-            </a>
-              
-          </div>
-      </div>
-      <div class="col-md-3 col-6">
-          <div class="contact-info">
-             <a  href="http://instagram.com/magicsiteuz" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-              <h5>Instagram</h5>
-              <p>@MagicSiteUz</p>
-             </a>
-          </div>
-      </div>
-      <div class="col-md-3 col-6">
-          <div class="contact-info">
-            <a  href="mailto:magicsiteuz@gmail.com">
-              <i class="fas fa-envelope"></i>
-              <h5>Elektron pochta</h5>
-              <p>magicsiteuz@gmail.com</p>
-            </a>
-          </div>
+      <div class="contact-section-h1 my-4 my-md-5 align-items-center justify-content-center">
+        <h1 class="fs-1 text-center roboto-bold playfair">
+          Sizga bilan ishlashga<span class="text-color-white">&nbsp;hamisha tayyormiz!</span> 
+        </h1>
+      </div>  
+    
+      <div class="row g-4 d-flex align-items-stretch my-3">
+        <!-- Contact Info -->
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a href="tel://+998886343707" target="_blank">
+                <i class="fas fa-phone"></i>
+                <h5>Telefon raqam</h5>
+                <p>+998 (88) 634 37 07</p>
+              </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a  href="http://navruzbro.t.me" target="_blank">
+                <i class="fab fa-telegram"></i>
+                <h5>Telegram</h5>
+                <p>+998 (88) 634 37 07</p>
+              </a>
+                
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a  href="http://instagram.com/magicsiteuz" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                <h5>Instagram</h5>
+                <p>@MagicSiteUz</p>
+              </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a  href="mailto:magicsiteuz@gmail.com">
+                <i class="fas fa-envelope"></i>
+                <h5>Elektron pochta</h5>
+                <p>magicsiteuz@gmail.com</p>
+              </a>
+            </div>
+        </div>
       </div>
     </div>
 
     <!-- Contact Form -->
     <div class="row contact-form">
-        <div class="col-md-5">
-        </div>
-        <div class="col-md-7 mx-auto">
-            <form action="#" method="POST">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control contact-us-from-control" placeholder="Ism" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control contact-us-from-control" placeholder="Familiya" required>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <input type="tel" class="form-control contact-us-from-control" placeholder="Telefon raqam" required>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control contact-us-from-control" rows="4" placeholder="Sizning xabaringiz" required></textarea>
-                </div>
-                <div class="text-start">
-                    <button class="btn-blur" type="submit">Xabarni yuborish</button>
-                </div>
-            </form>
+        <div class="container-xl">
+          <div class="col-md-5">
+          </div>
+          <div class="col-md-7 mx-auto">
+              <form action="#" method="POST">
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control contact-us-from-control" placeholder="Ism" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control contact-us-from-control" placeholder="Familiya" required>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <input type="tel" class="form-control contact-us-from-control" placeholder="Telefon raqam" required>
+                  </div>
+                  <div class="mb-3">
+                      <textarea class="form-control contact-us-from-control" rows="4" placeholder="Sizning xabaringiz" required></textarea>
+                  </div>
+                  <div class="text-start">
+                      <button class="btn-blur" type="submit">Xabarni yuborish</button>
+                  </div>
+              </form>
+          </div>
         </div>
     </div>
-   </div>
 </section>
 <!--END Fourth section. Contact-US-->
 
@@ -488,22 +491,22 @@
         <footer class="footer-section mt-5 px-3 py-5 ">
             <div class="container-fluid unselectable">
                 <div class="row txt-green-grey">
-                    <div class="col-lg-4 col-12 my-3">
-                        <h5 class="text-center h5 fs-4"><a class="text-decoration-none" href="http://navruzbro.uz" target="_blank"><span class="playfair txt-green-grey" >MagicSiteUz - 2024-2025</span></a></h5>
+                    <div class="col-lg-3 col-12 my-3">
+                        <h5 class="text-center h5 fs-4"><a class="text-decoration-none" href="http://navruzbro.uz" target="_blank"><span class="playfair txt-green-grey" >MagicSiteUz - 2025</span></a></h5>
                     </div>
-                    <div class="col-lg-7 col-12 my-3">
+                    <div class="col-lg-8 col-12 my-3">
                         <div class="row txt-green-grey ">
                             <div class="col fs-4">
-                                <code class=""><a href="#" class="text-decoration-none playfair">Home</a> </code>
+                                <code class=""><a href="#" class="text-decoration-none playfair">Xizmatlar</a> </code>
                             </div>
                             <div class="col fs-4">
-                                <code class=""><a href="#" class="text-decoration-none playfair">Service</a> </code>
+                                <code class=""><a href="#" class="text-decoration-none playfair">Narxlar</a> </code>
                             </div>
                             <div class="col fs-4">
-                                <code class=""><a href="#" class="text-decoration-none playfair">Resume</a> </code>
+                                <code class=""><a href="#" class="text-decoration-none playfair">Ishlar</a> </code>  
                             </div>
                             <div class="col fs-4">
-                                <code class=""><a href="#" class="text-decoration-none playfair">Portfolio</a> </code>  
+                              <code class=""><a href="#" class="text-decoration-none playfair">Aloqa</a> </code>  
                             </div>
                         </div>
                     </div>
