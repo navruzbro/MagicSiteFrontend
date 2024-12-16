@@ -46,26 +46,34 @@ let currentTheme = savedTheme || (userPrefersDark ? "dark" : "light");
 
 document.documentElement.setAttribute("data-theme", currentTheme);
 
+// Funksiya: Element mavjudligini tekshirish va faqat mavjud bo'lganda yangilash
 const updateTheme = () => {
-  if (currentTheme === "dark") {
-    themeIcon.style.transform = "rotate(0deg)";
-    logo.src = "./static/media/logo/magicsitelight.PNG"; // Dark rejim uchun logo
-    headerImg.src = "./static/media/sitephotos/header-section-img.webp"; // Dark rejim uchun header rasm
-  } else {
-    themeIcon.style.transform = "rotate(180deg)";
-    logo.src = "./static/media/logo/magicsitetext.PNG"; // Light rejim uchun logo
-    headerImg.src = "./static/media/sitephotos/header-section-img-light.webp"; // Light rejim uchun header rasm
+  if (themeIcon) {
+    themeIcon.style.transform = currentTheme === "dark" ? "rotate(0deg)" : "rotate(180deg)";
+  }
+  if (logo) {
+    logo.src = currentTheme === "dark"
+      ? "./static/media/logo/magicsitelight.PNG"
+      : "./static/media/logo/magicsitetext.PNG";
+  }
+  if (headerImg) {
+    headerImg.src = currentTheme === "dark"
+      ? "./static/media/sitephotos/header-section-img.webp"
+      : "./static/media/sitephotos/header-section-img-light.webp";
   }
 };
 
 updateTheme();
 
-themeToggle.addEventListener("click", () => {
-  currentTheme = currentTheme === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  localStorage.setItem("theme", currentTheme);
-  updateTheme();
-});
+// Tugma bosilganda ishlaydi
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    currentTheme = currentTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    localStorage.setItem("theme", currentTheme);
+    updateTheme();
+  });
+}
 
 
 

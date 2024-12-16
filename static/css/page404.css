@@ -1,0 +1,22 @@
+
+.navbar-header-section{
+    background-image:url(../media/sitephotos/page404-light.jpg);
+    transition: background-image 0.4s ease, color 0.1s ease-in-out;
+    width:100%!important;
+    height:100vh!important;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+  }
+  
+  /* Dark Mode */
+  [data-theme="dark"] .navbar-header-section{
+    background-image:url(../media/sitephotos/page404-night.jpg);
+  }
+
+  .page404-btn{
+    border-radius:0 0 10px 10px;
+    backdrop-filter: 30px;
+    margin-top:0;
+    border:0 2px 2px 2px;
+  }

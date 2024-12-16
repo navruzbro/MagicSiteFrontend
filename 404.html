@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html data-site-author="Navruz" lang="uz" charset="UTF-8" >
+    <head>
+       <!--Meta tags--> 
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+       <!--Keywords-->
+
+       <!--Description-->
+
+       <!--Page title and page logo-->
+       <title>Sahifa topilmadi - MagicSiteUz</title>
+       
+       <!--Bootstrap v5.2.3-->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <!--Main css-->
+        <link href="./static/css/shared.css" rel="stylesheet">
+        <link href="./static/css/index.css" rel="stylesheet">
+        <link href="./static/css/page404.css" rel="stylesheet">
+        <!--Fonts-->
+            <!--Roboto font import (google fonts)-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+            <!--Playfair font import (google fonts)-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!--Font awesome (Icons)-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    
+    </head>
+    <body id="body">
+
+<!--bottom navbar for smaller than 576px-->
+<div id="small-navbar" class="small-navbar fixed-bottom roboto unselectable">
+  <div class="bottom-navbar">
+      <div class="row">
+          <!--
+          <div class="col">
+              <a href="#" class="bottom-nav-item">
+                  <p>
+                      <i class="fa-solid fa-house"></i>
+                      <br>
+                      <code>Asosiy</code>
+                  </p> 
+              </a>
+          </div>
+          -->
+          <div class="col">
+              <a href="#" class="bottom-nav-item">
+                  <p>
+                      <i class="fa-solid fa-computer"></i>
+                      <br>
+                      <code>Xizmatlar</code>
+                  </p>
+              </a>
+          </div>
+          <div class="col">
+              <a href="#" class="bottom-nav-item">
+                  <p>
+                      <i class="fa-solid fa-file"></i>
+                      <br>
+                      <code>Narxlar</code>
+                  </p>
+              </a>
+          </div>
+          <div class="col">
+              <a href="#" class="bottom-nav-item">
+                  <p>
+                      <i class="fa-solid fa-briefcase"></i>
+                      <br>
+                      <code>Ishlar</code>
+                  </p>
+              </a>
+          </div>
+          <div class="col">
+              <a href="#" class="bottom-nav-item">
+                  <p>
+                       <i class="fa-solid fa-phone"></i>
+                      <br>
+                      <code>Aloqa</code>
+                  </p>
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+<!--END-->
+
+<!--Loader animation-->
+<div id="loader" class="loader-container">
+  <div class="loader">
+    <div class="inner one"></div>
+    <div class="inner two"></div>
+    <div class="inner three"></div>
+  </div>
+</div>
+<!--End Loader animation-->
+
+<!--Canvas animation-->
+<div class="container-xl">
+  <canvas id="animation-canvas"></canvas>
+</div>
+
+<!--NAVBAR and HEADER SECTION-->
+<div class="navbar-header-section" id="navbar-header-404">
+    <!--Navbar section-->
+          <nav class="navbar navbar-expand-lg" id="navbar">
+              <div class="container-xl">
+                <a class="navbar-brand" href="#" target="_blank"><img id="magicsite-logo" src="./static/media/logo/magicsitetext.PNG" alt="MagicSiteUz"> </a>
+                <a class="navbar-call-icon navbar-toggler" href="tel://+998886343707">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link fs-4 roboto-medium playfair"href="#">Asosiy</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-4 roboto-medium playfair" href="#">Xizmatlar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-4 roboto-medium playfair" href="#">Narxlar</a>
+                    </li>
+                    <li class="nav-item " >
+                      <a class="nav-link fs-4 roboto-medium playfair" href="#" >Ishlar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link fs-4 roboto-medium playfair" href="#" >Aloqa</a>
+                    </li>
+                  </ul>
+                  <div class="navbar-over-phone-number">
+                    <a href="tel://+998886343707" class="text-decoration-none roboto-bold fs-5">
+                      <i class="fa-solid fa-phone"></i>
+                      +998 886 34 37 07
+                    </a>
+                  </div>
+                </div>
+              </div>
+          </nav>
+    <!--end Navbar section-->
+    <!--Header section-->
+    <header class="header g766 header404" id="header">
+      <div class="container-xl">
+        <div class="main-section d-flex justify-content-center">
+            <button id="theme-toggle" class="toggle-theme-button-light-night" aria-label="Toggle Theme">
+                <span class="toggle-theme-button-light-night-icon" id="theme-icon"></span>
+            </button>
+           <a href="./index.html" class="btn-blur page404-btn roboto-bold">
+            <i class="fa-solid fa-backward"></i>&nbsp;Bosh sahifaga qaytish
+           </a>
+        </div>
+      </div>
+    </header>
+<!--End Header section-->
+</div>
+<!--END NAVBAR AND HEADER SECTION-->
+  
+
+<!--between animation-->
+<div class="text-container_btw unselectable" id="between-animation-1">
+  <div class="text-wrapper_btw">
+    <div class="text-slide_btw fs-1 roboto-medium ">
+      <span class="span_1"> Veb sayt yaratish xizmati </span>
+      <span class="span_2" > / Ishonchli, tezkor, Hamyonbop </span> 
+      <span class="span_1"> / Biznesingizni rivojlantirish uchun eng yaxshi yechim </span>
+      <span class="span_2"> / Avtomatlashtirilgan tizimlar &nbsp;</span>
+    </div>
+    <div class="text-slide_btw fs-1 roboto-medium ">
+      <span class="span_1"> Veb sayt yaratish xizmati </span>
+      <span class="span_2" > / Ishonchli, tezkor, Hamyonbop </span> 
+      <span class="span_1"> / Biznesingizni rivojlantirish uchun eng yaxshi yechim </span>
+      <span class="span_2"> / Avtomatlashtirilgan tizimlar &nbsp;</span>
+    </div>
+  </div>
+</div>
+<!--End beetween animation-->
+<!--Fourth section. Contact-US-->
+<section class="contact-section mt-4" id="contact-section">
+   <div class="container-xl">
+      <div class="contact-section-head my-4 my-md-5 d-flex align-items-center justify-content-center">
+        <h3 class="fs-3  text-center roboto-medium playfair">
+          Biz bilan aloqa
+        </h3>
+      </div>
+      <div class="contact-section-h1 my-2 my-md-3 align-items-center justify-content-center">
+        <h1 class="fs-1 text-center roboto-bold playfair">
+          Sizga bilan ishlashga<span class="text-color-white">&nbsp;hamisha tayyormiz!</span> 
+        </h1>
+      </div>  
+    
+      <div class="row g-4 d-flex align-items-stretch my-3">
+        <!-- Contact Info -->
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a href="tel://+998886343707" target="_blank">
+                <i class="fas fa-phone"></i>
+                <h5>Telefon raqam</h5>
+                <p>+998 (88) 634 37 07</p>
+              </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a  href="http://navruzbro.t.me" target="_blank">
+                <i class="fab fa-telegram"></i>
+                <h5>Telegram</h5>
+                <p>+998 (88) 634 37 07</p>
+              </a>
+                
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a  href="http://instagram.com/magicsiteuz" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                <h5>Instagram</h5>
+                <p>@MagicSiteUz</p>
+              </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="contact-info">
+              <a  href="mailto:magicsiteuz@gmail.com">
+                <i class="fas fa-envelope"></i>
+                <h5>Elektron pochta</h5>
+                <p>magicsiteuz@gmail.com</p>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="row contact-form">
+        <div class="container-xl">
+          <div class="col-md-5">
+          </div>
+          <div class="col-md-7 mx-auto">
+              <form action="#" method="POST">
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control contact-us-from-control" placeholder="Ism" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <input type="text" class="form-control contact-us-from-control" placeholder="Familiya" required>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <input type="tel" class="form-control contact-us-from-control" placeholder="Telefon raqam" required>
+                  </div>
+                  <div class="mb-3">
+                      <textarea class="form-control contact-us-from-control" rows="4" placeholder="Sizning xabaringiz" required></textarea>
+                  </div>
+                  <div class="text-start">
+                      <button class="btn-blur" type="submit">Xabarni yuborish</button>
+                  </div>
+              </form>
+          </div>
+        </div>
+    </div>
+</section>
+<!--END Fourth section. Contact-US-->
+<!--Footer section-->
+        <footer class="footer-section mt-5 px-3 py-5 ">
+            <div class="container-fluid unselectable">
+                <div class="row txt-green-grey">
+                    <div class="col-lg-3 col-12 my-3">
+                        <h5 class="text-center h5 fs-4"><a class="text-decoration-none" href="http://navruzbro.uz" target="_blank"><span class="playfair txt-green-grey" >MagicSiteUz - 2025</span></a></h5>
+                    </div>
+                    <div class="col-lg-8 col-12 my-3">
+                        <div class="row txt-green-grey ">
+                            <div class="col fs-4">
+                                <code class=""><a href="#" class="text-decoration-none playfair">Xizmatlar</a> </code>
+                            </div>
+                            <div class="col fs-4">
+                                <code class=""><a href="#" class="text-decoration-none playfair">Narxlar</a> </code>
+                            </div>
+                            <div class="col fs-4">
+                                <code class=""><a href="#" class="text-decoration-none playfair">Ishlar</a> </code>  
+                            </div>
+                            <div class="col fs-4">
+                              <code class=""><a href="#" class="text-decoration-none playfair">Aloqa</a> </code>  
+                            </div>
+                        </div>
+                    </div>
+            
+                    <br>
+                    <div class="col-12 my-4">
+                        <h5 class="text-center  text-decoration-none txt-green-grey">
+                            <a href="http://t.me/cyberasia" target="_blank" class="text-decoration-none py-5 px-2">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                           
+                            <a href="http://github.com/navruzbro" target="_blank" class="text-decoration-none py-5 px-2">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="http://instagram.com/navruzbro_" target="_blank" class="text-decoration-none py-5 px-2">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/navruzbro/" target="_blank" class="text-decoration-none py-5 px-2">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!--END footer section-->
+        <!--Js script-->
+           <script src="./static/js/main.js"></script>
+           
+           <!--Bootstrap v5.2.3-->
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+
+</html>

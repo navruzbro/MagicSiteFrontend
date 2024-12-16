@@ -86,7 +86,19 @@
   color: var(--text-black-white);
   box-shadow: var(--main-site-text-p-i-box-shadow);
 }
+.navbar-call-icon{
+  display:none;
+}
   /*navbar responsive*/
+  @media(max-width:992px){
+    .navbar-call-icon{
+      display:inline-block;
+      position:absolute;
+      right:3rem;
+      font-size:1rem;
+    }
+  }
+
   @media(max-width:768px){
     .navbar-brand img{
       width:11rem;
@@ -576,6 +588,17 @@
   color:var(--text-black-a9e978);
 }
 
+.third-section-footer p a{
+  color:var(--text-color);
+  transition: all 0.3s;
+  cursor:pointer;
+  transform: scale(1), translateY(0);
+}
+.third-section-footer p a:hover{
+  color:var(--text-black-a9e978);
+  transform: scale(1.1), translateY(3px);
+}
+
 @media (max-width: 576px) {
   .service-card {
       padding: 20px;
@@ -590,6 +613,7 @@
   transition: background-color 0.4s ease, color 0.4s ease;
   margin-bottom:0;
   padding-bottom:0;
+  
 }
 .contact-section-head{
   height:2px;
