@@ -1,5 +1,5 @@
 #contact-us-navbar-header{
-    background-image:url(../media/sitephotos/Contact-us-picture.jpg);
+    background-image:url(../media/sitephotos/header-background-light.jpg);
     transition: background-image 0.4s ease, color 0.1s ease-in-out;
     width:100%!important;
     height:100vh;
@@ -7,3 +7,8 @@
     background-size:cover;
     background-position: right;
 }
+
+/* Dark Mode */
+[data-theme="dark"] #contact-us-navbar-header{
+    background-image:url(../media/sitephotos/header-background-night.jpg);
+  }

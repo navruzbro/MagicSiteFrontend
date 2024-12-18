@@ -18,3 +18,36 @@ Qilinishi kerak bo'lgan ishlar:
     Qo'shimcha animatsiyalar 
 
 Scrolleffectga ikkinchi srolleffectlarini qo'shish... sayt ko'rinishini chiroylilash
+
+
+
+MagicSite uchun qo'shimcha funksionallik va dizayn g'oyalari saytni yanada jozibador va foydalanuvchilar uchun qulayroq qiladi. Quyida ba'zi foydali takliflarni keltiraman:
+
+1. Interaktiv animatsiyalar
+Hover effektlar: Tugmalar, linklar yoki kartalarga hover qilinganda harakatlanadigan yoki rangini o'zgartiradigan effektlar.
+Scroll animatsiyalar: Sahifa pastga surilganda elementlar asta-sekin ko'rinadigan (fade-in) bo'lib chiqib kelishi.
+Preloader: Sahifa yuklanayotgan vaqtda minimalist animatsiyaga ega yuklash belgisi.
+Namuna:
+
+css
+Copy code
+/* Hover animatsiya */
+.button {
+  background-color: #a9e978;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: #c5f0a4;
+  transform: scale(1.1);
+}
+
+/* Scroll animatsiya (CSS va JS kerak bo'lishi mumkin) */
+.scroll-anim {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+.scroll-anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
